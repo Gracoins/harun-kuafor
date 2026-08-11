@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Harun Kuaför — Karşıyaka, İzmir · Saç Kesimi, Renk ve Röfle</title>
-<meta name="description" content="Karşıyaka Fikri Altay'da kuaför. Saç kesimi, boyama, röfle, renk açma ve renk düzeltme. Google'da 638 değerlendirmede 4.8 puan. İşe başlamadan önce ne olup ne olmayacağını konuşuyoruz.">
+<title>Harun Ulun Kuaför — Silifke, Mersin · Saç Kesimi ve Boyama</title>
+<meta name="description" content="Silifke Saray Mahallesi'nde kuaför. Saç kesimi, boyama, bakım ve fön. Google'da 35 değerlendirmede 4.8 puan. Hijyen ve özenle çalışıyoruz.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Harun Kuaför — Karşıyaka, İzmir">
-<meta property="og:description" content="Saç kesimi, renk ve röfle. 638 değerlendirmede 4.8 puan. Önce konuşuruz, sonra makas.">
+<meta property="og:title" content="Harun Ulun Kuaför — Silifke, Mersin">
+<meta property="og:description" content="Saç kesimi ve boyama. 35 değerlendirmede 4.8 puan. Güler yüzle, özenle.">
 <meta property="og:url" content="https://gracoins.github.io/harun-kuafor/">
 <meta property="og:image" content="https://gracoins.github.io/harun-kuafor/og.png">
 <meta property="og:image:width" content="1200">
@@ -116,7 +116,6 @@ body.menu-open .overlay nav a:nth-child(1){transition-delay:.1s}
 body.menu-open .overlay nav a:nth-child(2){transition-delay:.16s}
 body.menu-open .overlay nav a:nth-child(3){transition-delay:.22s}
 body.menu-open .overlay nav a:nth-child(4){transition-delay:.28s}
-body.menu-open .overlay nav a:nth-child(5){transition-delay:.34s}
 .overlay .ov-foot{position:absolute;bottom:2.5rem;left:0;right:0;text-align:center;font-size:.82rem;color:var(--cream-faint)}
 
 .shell{background:rgba(246,239,228,.05);box-shadow:inset 0 0 0 1px var(--hair);border-radius:var(--shell);padding:2px}
@@ -182,13 +181,17 @@ section{padding:clamp(5.5rem,10vw,9.5rem) 0}
 .svc .dur{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-faint);text-align:right}
 .svc.star h3::after{content:'';display:inline-block;width:.42rem;height:.42rem;border-radius:99px;background:var(--copper);margin-left:.6rem;vertical-align:middle}
 
-.fix{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
-.tone{display:flex;flex-direction:column;gap:.65rem}
-.tone .row2{display:flex;align-items:center;gap:1rem}
-.tone .bar{height:3.1rem;border-radius:.8rem;flex:1;box-shadow:inset 0 1px 1px rgba(255,255,255,.14)}
-.tone .lb{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cream-faint);width:6.2rem;flex:none}
-.tone .arrow{display:flex;justify-content:center;color:var(--copper);opacity:.55}
-.tone .arrow svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.1;fill:none}
+.care{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4.5rem);align-items:center}
+.care ul{list-style:none;margin-top:2rem;display:flex;flex-direction:column;gap:1.3rem}
+.care li{display:flex;gap:1rem;align-items:flex-start}
+.care li svg{width:19px;height:19px;stroke:var(--copper);stroke-width:1.3;fill:none;flex:none;margin-top:.2rem}
+.care li strong{display:block;font-weight:500;font-size:.98rem}
+.care li span{font-size:.89rem;color:var(--cream-dim)}
+.quote{padding:2.2rem 2.4rem;background:linear-gradient(150deg,var(--raise),var(--ground-2))}
+.quote blockquote{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(1.2rem,2.2vw,1.55rem);
+  line-height:1.42;letter-spacing:-.02em;color:var(--cream)}
+.quote figcaption{margin-top:1.2rem;font-size:.84rem;color:var(--cream-faint)}
+.quote figcaption b{color:var(--cream);font-weight:500}
 
 .revs{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3.4rem}
 .rev.feat{grid-column:span 3}
@@ -242,7 +245,7 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
 .wa svg{width:19px;height:19px;fill:currentColor;flex:none}
 
 @media (max-width:900px){
-  .fgrid,.book,.split2,.fix{grid-template-columns:1fr}
+  .fgrid,.book,.split2,.care{grid-template-columns:1fr}
   .revs{grid-template-columns:1fr}
   .rev.feat{grid-column:span 1}
   .svc{grid-template-columns:2.6rem 1fr;gap:1rem}
@@ -274,12 +277,12 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
   <div class="nav-pill">
     <a class="brand" href="#top">
       <span class="mk">H</span>
-      <span><b>Harun Kuaför</b><i>Karşıyaka · İzmir</i></span>
+      <span><b>Harun Ulun</b><i>Kuaför · Silifke</i></span>
     </a>
     <nav class="nav-links">
       <a href="#hikaye">Hakkımızda</a>
       <a href="#hizmetler">Hizmetler</a>
-      <a href="#renk">Renk Düzeltme</a>
+      <a href="#neden">Neden Biz</a>
       <a href="#yorumlar">Yorumlar</a>
       <a href="#iletisim">İletişim</a>
     </nav>
@@ -292,11 +295,11 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
   <nav>
     <a href="#hikaye">Hakkımızda</a>
     <a href="#hizmetler">Hizmetler</a>
-    <a href="#renk">Renk Düzeltme</a>
+    <a href="#neden">Neden Biz</a>
     <a href="#yorumlar">Yorumlar</a>
     <a href="#randevu">Randevu</a>
   </nav>
-  <div class="ov-foot">Fikri Altay, Karşıyaka · 0505 115 81 32</div>
+  <div class="ov-foot">Saray Mahallesi, Silifke · 0505 115 81 32</div>
 </div>
 
 <main id="top">
@@ -304,11 +307,11 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow left load d1">Karşıyaka · Fikri Altay</span>
-        <h1 class="serif load d2">Önce konuşuruz,<span class="l2 it">sonra makas.</span></h1>
+        <span class="eyebrow left load d1">Silifke · Mersin</span>
+        <h1 class="serif load d2">Güler yüzle,<span class="l2 it">özenle.</span></h1>
         <p class="lede load d3">
-          Saç kesimi, renk ve röfle. Koltuğa oturduğunuzda ilk yaptığımız şey saçınıza bakmak —
-          olacak olanı da olmayacak olanı da baştan söyleriz.
+          Saç kesimi ve boyama. Silifke'de hijyeni ve müşteri memnuniyetini
+          önde tutan bir kuaförüz — Google'daki yorumlarımız da bunu söylüyor.
         </p>
         <div class="hero-cta load d4">
           <a class="pill lg" href="#randevu">Randevu alın<span class="knob"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M9 5h10v10"/></svg></span></a>
@@ -316,8 +319,8 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
         </div>
         <div class="stats load d5">
           <div><b>4.8<em>★</em></b><span>Google Puanı</span></div>
-          <div><b>638</b><span>Değerlendirme</span></div>
-          <div><b>Pazar</b><span>Açığız</span></div>
+          <div><b>35</b><span>Değerlendirme</span></div>
+          <div><b>3.572</b><span>Instagram Takipçi</span></div>
         </div>
         <div class="swatches" aria-hidden="true">
           <i class="sw1"></i><i class="sw2"></i><i class="sw3"></i><i class="sw4"></i><i class="sw5"></i><i class="sw6"></i>
@@ -329,13 +332,12 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
           <span class="chip">Çalışma Saatleri</span>
           <div class="rule"></div>
           <dl>
-            <div class="kv"><dt>Pazartesi</dt><dd>09:00 – 20:00</dd></div>
-            <div class="kv"><dt>Salı</dt><dd class="off">Kapalı</dd></div>
-            <div class="kv"><dt>Çarşamba – Cumartesi</dt><dd>09:00 – 20:00</dd></div>
-            <div class="kv"><dt>Pazar</dt><dd>11:00 – 18:00</dd></div>
+            <div class="kv"><dt>Pazartesi</dt><dd>07:30 – 19:00</dd></div>
+            <div class="kv"><dt>Salı – Cumartesi</dt><dd>07:30 – 19:30</dd></div>
+            <div class="kv"><dt>Pazar</dt><dd class="off">Kapalı</dd></div>
           </dl>
           <div class="rule"></div>
-          <div class="kv"><dt>Adres</dt><dd>Fikri Altay Mah.<br>6183. Sk. No: 31/A<br>Karşıyaka / İzmir</dd></div>
+          <div class="kv"><dt>Adres</dt><dd>Saray Mahallesi<br>1. Sk. No: 26<br>Silifke / Mersin</dd></div>
           <div class="rule"></div>
           <div class="kv"><dt>Telefon</dt><dd><a href="tel:+905051158132">0505 115 81 32</a></dd></div>
         </div>
@@ -347,13 +349,12 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
     <div class="wrap split2">
       <div>
         <span class="eyebrow left rv">Nasıl çalışıyoruz</span>
-        <p class="statement serif rv" style="transition-delay:.06s;margin-top:1.3rem">Aceleye <span class="it">getirmiyoruz.</span></p>
+        <p class="statement serif rv" style="transition-delay:.06s;margin-top:1.3rem">Hijyen ve <span class="it">özen</span> önce gelir.</p>
       </div>
       <p class="sub rv" style="transition-delay:.12s">
-        İşimizin ağırlığı renk: boyama, röfle, renk açma ve başka yerde istenmeyen bir sonuç
-        alınmış saçların toparlanması. Kınalı saçı yıpratmadan açmak ya da komple boyanmış bir saçı
-        adım adım istenen tona getirmek sabır isteyen işlerdir. Bir işlem tek seansta mümkün
-        değilse, bunu size en başta söyleriz — koltuğa oturmadan önce.
+        Silifke'de saç kesimi ve boyama üzerine çalışıyoruz. Müşterilerimizin en çok bahsettiği
+        şey aynı: temizlik standartlarımız, ilgimiz ve güler yüzümüz. Bir işlemi hızlı bitirmek
+        yerine doğru bitirmeyi tercih ediyoruz.
       </p>
     </div>
   </section>
@@ -363,51 +364,37 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
       <div class="head">
         <span class="eyebrow left rv">Hizmetler</span>
         <h2 class="serif rv" style="transition-delay:.06s">Ne yapıyoruz</h2>
-        <p class="rv" style="transition-delay:.1s">Her işlem öncesinde saçınıza bakıp neyin mümkün olduğunu birlikte konuşuyoruz.</p>
+        <p class="rv" style="transition-delay:.1s">Saç kesimi ve boyama üzerine yoğunlaşıyoruz.</p>
       </div>
 
       <div class="svcs">
         <article class="svc star rv">
           <span class="no">01</span>
           <div>
-            <h3 class="serif">Ön Görüşme ve Saç Analizi</h3>
-            <p>İşleme başlamadan önce saçınızın durumunu değerlendirir, ne istediğinizi netleştirir,
-               olacak ve olmayacak olanı baştan söyleriz. Müşterilerimizin en çok yazdığı şey bu.</p>
+            <h3 class="serif">Saç Kesimi</h3>
+            <p>Saç yapınıza ve günlük kullanımınıza göre planlanan kesim. Müşterilerimizin
+               en çok memnun kaldığı hizmetlerimizden biri.</p>
           </div>
-          <span class="dur">Ücretsiz · 10–15 dk</span>
+          <span class="dur">30–60 dk</span>
         </article>
 
-        <article class="svc rv" style="transition-delay:.04s">
+        <article class="svc star rv" style="transition-delay:.04s">
           <span class="no">02</span>
-          <div><h3 class="serif">Saç Kesimi</h3>
-            <p>Saç yapınıza ve günlük olarak nasıl kullandığınıza göre planlanan kesim.</p></div>
-          <span class="dur">30–60 dk</span>
+          <div><h3 class="serif">Saç Boyama</h3>
+            <p>Dip boya, komple renk ve ton değişimi. "Boya konusunda harika" — müşterilerimizden
+               biri bizi böyle tarif etti.</p></div>
+          <span class="dur">90–150 dk</span>
         </article>
 
         <article class="svc rv" style="transition-delay:.08s">
           <span class="no">03</span>
-          <div><h3 class="serif">Saç Boyama</h3>
-            <p>Dip boya, komple renk ve ton değişimi. Hedef rengi işlem öncesinde birlikte belirliyoruz.</p></div>
-          <span class="dur">90–150 dk</span>
+          <div><h3 class="serif">Saç Bakımı</h3>
+            <p>Kesim ve boya sonrası saçınızı besleyen bakım uygulamaları.</p></div>
+          <span class="dur">30–45 dk</span>
         </article>
 
         <article class="svc rv" style="transition-delay:.12s">
           <span class="no">04</span>
-          <div><h3 class="serif">Röfle ve Renk Açma</h3>
-            <p>Saçın taşıyabileceği kadarını yaparız; gerekiyorsa birden fazla seansa yayarız.</p></div>
-          <span class="dur">150–240 dk</span>
-        </article>
-
-        <article class="svc star rv" style="transition-delay:.16s">
-          <span class="no">05</span>
-          <div><h3 class="serif">Renk Düzeltme</h3>
-            <p>Başka yerde istenmeyen sonuç alınmış ya da kınalı saçların adım adım toparlanması.
-               Tek seansta bitmeyebilir; planı en baştan çıkarırız.</p></div>
-          <span class="dur">Saça göre planlanır</span>
-        </article>
-
-        <article class="svc rv" style="transition-delay:.2s">
-          <span class="no">06</span>
           <div><h3 class="serif">Fön ve Şekillendirme</h3>
             <p>Günlük fön, dalga ve şekillendirme uygulamaları.</p></div>
           <span class="dur">30–60 dk</span>
@@ -416,33 +403,33 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
     </div>
   </section>
 
-  <section class="band" id="renk">
-    <div class="wrap fix">
+  <section class="band" id="neden">
+    <div class="wrap care">
       <div>
-        <span class="eyebrow left rv">En çok yaptığımız iş</span>
+        <span class="eyebrow left rv">Neden biz</span>
         <h2 class="serif rv" style="transition-delay:.06s;font-size:clamp(2.1rem,5vw,3.6rem);margin-top:1.3rem">
-          Saçınız <span class="it">istediğiniz gibi çıkmadıysa</span></h2>
-        <p class="rv" style="transition-delay:.1s;color:var(--cream-dim);margin-top:1.3rem;max-width:52ch">
-          Kına, komple açılmış saç, tutmamış bir ton — bunların hepsi geri döner, ama bir günde değil.
-          Saçın taşıyabileceğini ölçer, kaç seans süreceğini işleme başlamadan söyleriz.
-          Yıpratmadan götürmek, hızlı götürmekten önemli.
-        </p>
-        <div class="rv" style="transition-delay:.14s;margin-top:2.2rem">
-          <a class="pill lg" href="#randevu">Saçınıza bakalım<span class="knob"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M9 5h10v10"/></svg></span></a>
-        </div>
+          Müşterilerimiz <span class="it">üç şeyden</span> bahsediyor</h2>
+        <ul>
+          <li class="rv" style="transition-delay:.1s">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+            <div><strong>Hijyen</strong><span>Temizlik standartlarımız yorumlarda en çok tekrar eden konu.</span></div>
+          </li>
+          <li class="rv" style="transition-delay:.14s">
+            <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 000-7.78z"/></svg>
+            <div><strong>İlgi ve güler yüz</strong><span>Sıkılmadan dinlemek, doğru sonucu birlikte bulmak.</span></div>
+          </li>
+          <li class="rv" style="transition-delay:.18s">
+            <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="9"/></svg>
+            <div><strong>Profesyonel işçilik</strong><span>Kesim de boya da aynı özenle yapılıyor.</span></div>
+          </li>
+        </ul>
       </div>
 
-      <div class="tone rv" style="transition-delay:.12s">
-        <div class="row2"><span class="lb">Başlangıç</span><span class="bar" style="background:linear-gradient(90deg,#7A3E1E,#A85A24)"></span></div>
-        <div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v14M6 13l6 6 6-6"/></svg></div>
-        <div class="row2"><span class="lb">1. Seans</span><span class="bar" style="background:linear-gradient(90deg,#A8672E,#C98B4B)"></span></div>
-        <div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v14M6 13l6 6 6-6"/></svg></div>
-        <div class="row2"><span class="lb">2. Seans</span><span class="bar" style="background:linear-gradient(90deg,#C99658,#DFB379)"></span></div>
-        <div class="arrow"><svg viewBox="0 0 24 24"><path d="M12 4v14M6 13l6 6 6-6"/></svg></div>
-        <div class="row2"><span class="lb">Hedef ton</span><span class="bar" style="background:linear-gradient(90deg,#DFBC8B,#EBD1A0)"></span></div>
-        <p style="font-size:.75rem;color:var(--cream-faint);margin-top:.6rem">
-          Örnek bir plan. Seans sayısı saçın durumuna göre değişir ve size baştan söylenir.</p>
-      </div>
+      <figure class="shell quote rv" style="transition-delay:.1s">
+        <blockquote>"Hijyen standartları, müşteri memnuniyetine verilen önem ve profesyonel
+          hizmet anlayışıyla bölgedeki en başarılı kuaförlerden biri. Tavsiye ederim."</blockquote>
+        <figcaption><b>Gökhan Üredi</b> — Google · 4 ay önce</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -450,7 +437,7 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
     <div class="wrap">
       <div class="head">
         <span class="eyebrow left rv">Müşterilerimiz</span>
-        <h2 class="serif rv" style="transition-delay:.06s">638 yorum, <span class="it">4.8 puan</span></h2>
+        <h2 class="serif rv" style="transition-delay:.06s">35 yorum, <span class="it">4.8 puan</span></h2>
         <p class="rv" style="transition-delay:.1s">Aşağıdakiler Google'dan olduğu gibi alınmıştır.</p>
       </div>
 
@@ -458,44 +445,43 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
         <figure class="rev feat shell rv">
           <div class="core">
             <div class="qstars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg></div>
-            <blockquote>“Ne istediğinizi tam olarak anlamadan işe başlamaması, olacak ve olmayacak
-              şeylerle ilgili sizi bilgilendirmesi, sabırla tüm sorularınıza destek olması tam anlamıyla
-              profesyonellik örneği. Başka bir kuaför tarafından komple sarıya boyanmış saçımı
-              iki ayrı işlemle sıfırdan röfle yapılmış hale getirdi.”</blockquote>
-            <figcaption>Emel S. <span>· Google · 3 hafta önce</span></figcaption>
+            <blockquote>“Bugüne kadar gittiğim en iyi kuaför. Hem ilgi hem güler yüz, ayrıca
+              profesyonel işçiliğine diyecek kelime bulamıyorum. Harun beye gitmeyen kişiler
+              çok şey kaçırmış demektir.”</blockquote>
+            <figcaption>neslihan nes <span>· Google · 2 yıl önce</span></figcaption>
           </div>
         </figure>
 
         <figure class="rev shell rv" style="transition-delay:.05s">
           <div class="core">
             <div class="qstars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg></div>
-            <blockquote>“Kınalı olan saçlarımı 3 kere açmasına rağmen hiç yıpranma olmadığı gibi
-              istediğim renge kavuşmanın mutluluğunu yaşıyorum.”</blockquote>
-            <figcaption>Azat K. <span>· Google · 9 ay önce</span></figcaption>
+            <blockquote>“Boya konusunda harika bir kuaför, kesinlikle şiddetle tavsiye ederim.
+              Çok ilgili ve alakalılar, teşekkür ediyorum, elinize sağlık.”</blockquote>
+            <figcaption>Ayşenur Adamhasan <span>· Google · 2 ay önce</span></figcaption>
           </div>
         </figure>
 
         <figure class="rev shell rv" style="transition-delay:.1s">
           <div class="core">
             <div class="qstars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg></div>
-            <blockquote>“Daha önce başka bir kuaförde saçıma boya ve fön yapılmıştı, hiç beğenmedim.
-              Sağolsun tam da istediğim gibi boyadı ve fönledi.”</blockquote>
-            <figcaption>Makbule A. <span>· Google · 2 ay önce</span></figcaption>
+            <blockquote>“Hijyen standartları, müşteri memnuniyetine verilen önem ve profesyonel
+              hizmet anlayışıyla bölgedeki en başarılı kuaförlerden biri. Tavsiye ederim.”</blockquote>
+            <figcaption>Gökhan Üredi <span>· Google · 4 ay önce</span></figcaption>
           </div>
         </figure>
 
         <figure class="rev shell rv" style="transition-delay:.15s">
           <div class="core">
             <div class="qstars"><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg><svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg></div>
-            <blockquote>“Çalışanlar çok samimi ve güler yüzlüler, içime sinmeyen her noktayı sorup
-              tek tek sıkılmadan ilgilendiler. 3 aydır devamlı müşteriyim.”</blockquote>
-            <figcaption>Elif <span>· Google · 6 ay önce</span></figcaption>
+            <blockquote>“Saç kesimi yaptırdım, tam istediğim gibi oldu, çok memnun kaldım.
+              Gönül rahatlığıyla tercih edebilirsiniz.”</blockquote>
+            <figcaption>funda Saygın <span>· Google · 1 yıl önce</span></figcaption>
           </div>
         </figure>
       </div>
 
       <div class="rv" style="margin-top:2.4rem">
-        <a class="pill ghost" href="https://www.google.com/maps/search/Harun+Kuaför+Fikri+Altay+6183+Sokak+Karşıyaka+İzmir" target="_blank" rel="noopener">Tüm yorumları Google'da okuyun<span class="knob"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M9 5h10v10"/></svg></span></a>
+        <a class="pill ghost" href="https://www.google.com/maps/search/Kuaför+Harun+Ulun+Saray+Mahallesi+Silifke+Mersin" target="_blank" rel="noopener">Tüm yorumları Google'da okuyun<span class="knob"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M9 5h10v10"/></svg></span></a>
       </div>
     </div>
   </section>
@@ -507,8 +493,8 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
         <h2 class="serif rv" style="transition-delay:.06s;font-size:clamp(2.1rem,5vw,3.6rem);margin-top:1.3rem">Nasıl işliyor</h2>
         <ol class="steps rv" style="transition-delay:.1s">
           <li><b>01</b><div><strong>Formu doldurun</strong><span>Talebiniz doğrudan WhatsApp'a düşer, hiçbir yere kaydedilmez.</span></div></li>
-          <li><b>02</b><div><strong>Ön görüşme</strong><span>Saçınıza bakar, neyin mümkün olduğunu konuşuruz.</span></div></li>
-          <li><b>03</b><div><strong>Net plan</strong><span>Kaç seans süreceğini işlem öncesinde söyleriz. Sürpriz yok.</span></div></li>
+          <li><b>02</b><div><strong>Onaylayalım</strong><span>Size uygun günü ve saati birlikte belirleriz.</span></div></li>
+          <li><b>03</b><div><strong>Bekleriz</strong><span>Saray Mahallesi'ndeki salonumuzda görüşürüz.</span></div></li>
         </ol>
       </div>
 
@@ -519,11 +505,9 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
             <div class="field"><label for="tel">Telefon</label><input id="tel" inputmode="tel" placeholder="05xx xxx xx xx"></div>
             <div class="field"><label for="hiz">Hizmet</label>
               <select id="hiz">
-                <option>Ön Görüşme ve Saç Analizi</option>
                 <option>Saç Kesimi</option>
                 <option>Saç Boyama</option>
-                <option>Röfle ve Renk Açma</option>
-                <option>Renk Düzeltme</option>
+                <option>Saç Bakımı</option>
                 <option>Fön ve Şekillendirme</option>
                 <option>Diğer / emin değilim</option>
               </select>
@@ -544,9 +528,9 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <h3 class="serif">Harun <span class="it">Kuaför</span></h3>
-        <p style="margin-top:.9rem;max-width:34ch">Karşıyaka Fikri Altay'da saç kesimi, renk ve röfle.
-           Önce konuşuruz, sonra makas.</p>
+        <h3 class="serif">Harun Ulun <span class="it">Kuaför</span></h3>
+        <p style="margin-top:.9rem;max-width:34ch">Silifke Saray Mahallesi'nde saç kesimi ve boyama.
+           Güler yüzle, özenle.</p>
         <div style="display:flex;gap:5px;margin-top:1.6rem;max-width:16rem" aria-hidden="true">
           <i style="height:2.2rem;flex:1;border-radius:99px;background:var(--t1)"></i>
           <i style="height:2.2rem;flex:1;border-radius:99px;background:var(--t2)"></i>
@@ -560,24 +544,23 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.5rem
         <div class="fh">İletişim</div>
         <ul>
           <li><a href="tel:+905051158132">0505 115 81 32</a></li>
-          <li><a href="tel:+902323234637">(0232) 323 46 37</a></li>
-          <li><a href="https://instagram.com/kuafor.harun" target="_blank" rel="noopener">@kuafor.harun</a></li>
-          <li><a href="https://www.google.com/maps/search/Harun+Kuaför+Fikri+Altay+6183+Sokak+Karşıyaka+İzmir" target="_blank" rel="noopener">Haritada aç</a></li>
+          <li><a href="https://instagram.com/harunulun" target="_blank" rel="noopener">@harunulun</a></li>
+          <li><a href="https://www.google.com/maps/search/Kuaför+Harun+Ulun+Saray+Mahallesi+Silifke+Mersin" target="_blank" rel="noopener">Haritada aç</a></li>
         </ul>
       </div>
       <div>
         <div class="fh">Adres ve Saatler</div>
         <ul>
-          <li>Fikri Altay Mah. 6183. Sk. No: 31/A</li>
-          <li>Karşıyaka / İzmir</li>
-          <li style="margin-top:.5rem">Pzt, Çar – Cmt · 09:00 – 20:00</li>
-          <li>Pazar · 11:00 – 18:00</li>
-          <li>Salı · Kapalı</li>
+          <li>Saray Mahallesi, 1. Sk. No: 26</li>
+          <li>Silifke / Mersin</li>
+          <li style="margin-top:.5rem">Pazartesi · 07:30 – 19:00</li>
+          <li>Salı – Cumartesi · 07:30 – 19:30</li>
+          <li>Pazar · Kapalı</li>
         </ul>
       </div>
     </div>
     <div class="fbot">
-      <span>© 2026 Harun Kuaför</span>
+      <span>© 2026 Harun Ulun Kuaför</span>
       <span>MY BASKETO LTD tarafından hazırlandı</span>
     </div>
   </div>
