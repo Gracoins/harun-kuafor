@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Harun Kuaför — Web Sitesi Teklifi</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{--gold:#c8a165;--gold-lt:#e2c79b;--pale:#f7f1e8;--deep:#2b2119;--rose:#e0a3ac;--ink:#1e1815;--muted:#8d7f70;--line:#ece0cf;--paper:#fbf8f4}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#e0d3c1;color:var(--ink);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.65;padding:30px 16px}
+  .page{max-width:820px;margin:0 auto 26px;background:#fff;box-shadow:0 20px 60px -24px rgba(0,0,0,.34);border-top:5px solid var(--gold)}
+  .inner{padding:52px 58px}
+  h2,h3,h4{font-weight:700;line-height:1.16;letter-spacing:-.02em}
+  .pf{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500}
+  .grad{background:linear-gradient(100deg,var(--gold),#8a6a4f 55%,#5c4632);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line);padding-bottom:26px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .mk{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#8a6a4f);display:grid;place-items:center;flex:none;padding:2px}
+  .logo .mk i{width:100%;height:100%;border-radius:50%;background:var(--deep);display:grid;place-items:center;font-style:normal;font-size:1rem;color:var(--gold-lt);letter-spacing:.06em}
+  .logo b{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.35rem;display:block;letter-spacing:.04em}
+  .logo i.s{font-style:normal;font-size:.52rem;letter-spacing:.26em;color:var(--muted);text-transform:uppercase;display:block;font-weight:500}
+  .doclabel{text-align:right;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .doclabel b{display:block;font-weight:700;font-size:1.5rem;color:var(--gold);margin-top:5px;text-transform:none;letter-spacing:-.02em}
+  .meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.8rem;color:var(--muted);margin:22px 0 30px}
+  .meta b{color:var(--ink);font-weight:600}
+  .eyebrow{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  h2{font-size:1.95rem;margin:6px 0 14px}
+  h3{font-size:1.26rem;margin:0 0 6px}
+  p{margin-bottom:12px}
+  .lead{background:var(--pale);border-left:3px solid var(--gold);padding:20px 24px;margin:8px 0 26px;font-size:1rem}
+  .lead strong{font-weight:700}
+  .hi{background:var(--deep);color:#fff;border-radius:14px;padding:24px 28px;margin:18px 0}
+  .hi .hd{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lt);font-weight:700;margin-bottom:9px}
+  .hi b{color:#fff;font-weight:700}
+  .hi p{color:rgba(255,255,255,.78);margin-bottom:9px}
+  .hi p:last-child{margin-bottom:0}
+  .term{background:#17110c;border-radius:10px;padding:16px 18px;margin:14px 0;font-family:ui-monospace,'SF Mono',Menlo,Consolas,monospace;font-size:.76rem;line-height:1.85;color:#d3c3ac;overflow-x:auto;white-space:pre}
+  .term .c{color:#8ad3a0}
+  .term .r{color:#ef9a9a}
+  .term .y{color:var(--gold-lt)}
+  section.block{margin:30px 0}
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px;margin-top:14px}
+  .feat div{display:flex;gap:10px;align-items:flex-start;font-size:.89rem}
+  .feat svg{width:16px;height:16px;color:var(--gold);flex:none;margin-top:5px}
+  .feat b{font-weight:700}
+  .demo{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:var(--deep);color:#fff;padding:18px 24px;border-radius:12px;margin-top:14px}
+  .demo a{color:var(--gold-lt);font-weight:700;word-break:break-all}
+  .demo small{color:#a99074;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+  .price-hero{background:var(--deep);color:#fff;padding:32px 34px;border-radius:14px;margin-top:16px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+  .price-hero .col small{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-lt)}
+  .price-hero .col b{font-size:2.7rem;font-weight:700;display:block;line-height:1.1;letter-spacing:-.04em}
+  .price-hero .col span{font-size:.84rem;color:#a99074}
+  .price-hero .divider{width:1px;background:rgba(200,161,101,.55)}
+  .roi{background:var(--pale);border:1px solid #ead9c2;border-radius:12px;padding:20px 24px;margin-top:16px;font-size:.92rem}
+  .roi b{color:#8a6a4f}
+  table{width:100%;border-collapse:collapse;margin-top:16px;font-size:.88rem}
+  th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+  td.amt{text-align:right;font-size:1.22rem;white-space:nowrap;font-weight:700;letter-spacing:-.02em}
+  tr.total td{border-bottom:none;border-top:2px solid var(--gold);font-weight:700;padding-top:16px}
+  tr.total td.amt{color:#8a6a4f;font-size:1.5rem}
+  .rec{display:inline-block;background:var(--gold);color:#fff;font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:100px;font-weight:700;margin-left:8px;vertical-align:middle}
+  .cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px}
+  .opt{border:1px solid var(--line);border-radius:14px;padding:22px 20px;background:var(--paper)}
+  .opt.hl{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+  .opt .k{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .opt h4{font-size:1.12rem;margin:4px 0 10px}
+  .opt .pr{font-size:1.4rem;font-weight:700;letter-spacing:-.03em}
+  .opt .pr small{font-size:.76rem;color:var(--muted);font-weight:400}
+  .opt p{font-size:.79rem;color:var(--muted);margin-top:8px;margin-bottom:0}
+  ul.plain{list-style:none;margin-top:12px}
+  ul.plain li{display:flex;gap:11px;align-items:flex-start;font-size:.88rem;margin-bottom:9px}
+  ul.plain svg{width:15px;height:15px;color:var(--gold);flex:none;margin-top:5px}
+  ul.plain b{font-weight:700}
+  .terms{font-size:.79rem;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-top:14px}
+  .terms b{color:var(--ink);font-weight:700}
+  .cta{margin-top:30px;border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;align-items:center}
+  .cta .sign b{font-size:1.2rem;display:block;font-weight:700}
+  .cta .sign span{font-size:.83rem;color:var(--muted)}
+  .btn{background:var(--gold);color:#fff;padding:14px 28px;border-radius:100px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  .foot{text-align:center;font-size:.7rem;color:var(--muted);margin-top:28px}
+  .noprint{max-width:820px;margin:0 auto 22px;text-align:center}
+  .noprint button{background:var(--deep);color:#fff;border:0;padding:12px 28px;border-radius:100px;font-family:'Outfit',sans-serif;font-weight:600;font-size:.8rem;letter-spacing:.08em;cursor:pointer;text-transform:uppercase}
+  @media(max-width:680px){.inner{padding:34px 26px}.feat,.cards{grid-template-columns:1fr}.price-hero .divider{display:none}.term{font-size:.66rem}
+    table{font-size:.79rem;table-layout:fixed}th,td{padding:10px 7px}
+    td.amt{font-size:1rem;white-space:normal}tr.total td.amt{font-size:1.18rem}}
+  @media print{body{background:#fff;padding:0}.noprint{display:none}.page{box-shadow:none;margin:0}
+    .price-hero,.demo,.btn,.opt.hl,.rec,.hi,.roi,.term{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+
+<div class="noprint"><button onclick="window.print()">⬇︎ PDF olarak kaydet / Yazdır</button></div>
+
+<div class="page"><div class="inner">
+
+  <div class="top">
+    <div class="logo">
+      <span class="mk"><i>H</i></span>
+      <span><b>HARUN</b><i class="s">Kuaför · Karşıyaka</i></span>
+    </div>
+    <div class="doclabel">Fiyat Teklifi<b>Web Sitesi</b></div>
+  </div>
+
+  <div class="meta">
+    <div><b>Hazırlayan:</b> MY BASKETO LTD · gozankaya@gmail.com</div>
+    <div><b>Hazırlanan:</b> Harun Kuaför — Fikri Altay, Karşıyaka / İzmir</div>
+    <div><b>Tarih:</b> 11.08.2026 · <b>Geçerlilik:</b> 14 gün</div>
+  </div>
+
+  <span class="eyebrow">Merhaba</span>
+  <div class="lead">
+    İlgilendiğiniz için teşekkürler. Yazmadan önce işletmenizi inceledim —
+    <strong>638 değerlendirmede 4.8 puan</strong>. Karşıyaka'daki kuaförlerin çoğunun
+    ulaşamadığı bir yerdesiniz ve bu kadar yorum yıllara yayılan bir emeğin karşılığı.
+    Yorumları okudum: en çok tekrar eden şey <strong>işe başlamadan önce ne olup ne
+    olmayacağını anlatmanız</strong> ve başka yerde istenmeyen sonuç alınmış saçları
+    toparlamanız. Bunlar ciddi birer fark — ama internette hiçbir yerde yazmıyor.
+  </div>
+
+  <div class="hi">
+    <div class="hd">★ Birinci mesele: adresiniz sizin değil</div>
+    <p>Google işletme kaydınızdaki <b>"Web sitesi"</b> düğmesine bastım. Gittiği yer:</p>
+    <div class="term">$ Google işletme kaydı → "Web sitesi"
+  → <span class="r">instagram.com/kuafor.harun</span>
+     <span class="r">(kendi adresiniz değil — kiraladığınız bir sayfa)</span></div>
+    <p style="margin-bottom:0">Sizi Google'da bulan kişi kendi sitenize değil, Instagram'ın
+    giriş ekranına düşüyor. Instagram'ı yarın kurallarını değiştirse, hesabı bir gün kapatsa
+    ya da erişimi kısıtlasa <b>638 yorumla kurduğunuz itibarın internetteki tek adresi
+    de sizinle birlikte gider.</b> Kendi alan adınız kimsenin kapatamayacağı tek yerdir.</p>
+  </div>
+
+  <div class="hi" style="background:#3a2d22">
+    <div class="hd">★ İkinci mesele: adınız sizi tarif etmiyor</div>
+    <p>Google'da <b>"Harun Kuaför"</b> diye arattım. Türkiye genelinde <b>yirmiye yakın</b>
+    işletme çıkıyor — üstelik <b>Karşıyaka'nın içinde bile</b> size çok benzeyen bir isim var.</p>
+    <p style="margin-bottom:0">İçlerinde en çok yoruma sahip olan sizsiniz. Ama sizi arayan
+    biri, hangisinin siz olduğunu ayırt edecek bir şey bulamıyor. <b>İsim ortak, itibar sizin —
+    ama itibarı gösterecek bir adresiniz yok.</b> Kendi alan adınız tam olarak bunu çözüyor:
+    "harunkuafor.com" dediğinizde tartışma bitiyor.</p>
+  </div>
+
+  <div class="hi" style="background:#1f3a2c">
+    <div class="hd" style="color:#9ad9b0">✓ İyi haber</div>
+    <p>Bu kadar çok "Harun Kuaför" varken alan adı hâlâ boşta. Üçünü de kontrol ettim:</p>
+    <div class="term">$ alan adı sorgusu
+  harunkuafor.com      <span class="c">MÜSAİT</span>
+  harunkuafor.com.tr   <span class="c">MÜSAİT</span>
+  harunkuafor.net      <span class="c">MÜSAİT</span></div>
+    <p style="margin-bottom:0">Alan adı yılda birkaç dolarlık bir masraf ve <b>sizin adınıza</b>
+    kaydedilir. Asıl maliyet fiyatı değil — aynı isimden bu kadar çok varken, bir gün
+    birinin alması işten bile değil.</p>
+  </div>
+
+  <p style="font-size:.9rem;color:var(--muted);margin-top:14px">
+    Anlatmak yerine yaptım. Kendi hizmetlerinizle, Google'daki gerçek puanınızla ve
+    içinde çalışan bir randevu formuyla.
+  </p>
+
+  <div class="demo">
+    <div><small>Canlı demo — şimdi inceleyin</small><br><a href="https://gracoins.github.io/harun-kuafor/">gracoins.github.io/harun-kuafor</a></div>
+    <div><small>Telefon &amp; bilgisayar uyumlu</small></div>
+  </div>
+
+  <section class="block">
+    <span class="eyebrow">Sitenin Kalbi</span>
+    <h2>Sizi <span class="pf grad">diğerlerinden ayıran şey</span></h2>
+    <p style="font-size:.92rem">
+      Yorumlarınızı tek tek okudum ve siteyi onların üzerine kurdum. Bir kuaför sitesinde
+      genelde bulunmayan, sizde gerçekten olan şeyler:
+    </p>
+    <ul class="plain">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Ön görüşme ayrı bir başlık —</b> "olacak ve olmayacak olanı baştan söyleriz" cümlesi sitenin en görünür yerinde. Müşterilerinizin en çok yazdığı şey bu; rakiplerin hiçbirinin sitesinde yazmıyor.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Renk düzeltme kendi başlığında —</b> başka yerde istenmeyen sonuç almış biri gece yarısı telefonda tam olarak bunu arıyor. Şu an o arama sizi bulmuyor.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>4.8 puan ve 638 değerlendirme sitenin üstünde —</b> bugün bu rakam sadece Google'da duruyor. Sitede, ilk ekranda görünüyor.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Randevu formu —</b> müşteri adını, telefonunu, istediği işlemi ve tarihi yazıyor. Talebin tamamı <b>düzenli bir mesaj halinde WhatsApp'ınıza düşüyor.</b> Komisyon yok, aracı yok, aylık üyelik yok.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Salı kapalı, Pazar açık —</b> çalışma saatleriniz sitenin üstünde net yazıyor. Pazar günü kuaför arayan biri için bu tek başına tercih sebebi.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Google kaydınızın düzeltilmesi —</b> "Web sitesi" düğmesi Instagram yerine kendi adresinize bağlanır. Kurulum paketine dahil.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Neler Dahil</span>
+    <h2>Siteniz neler sunuyor?</h2>
+    <div class="feat">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Salonunuza özel tasarım</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>WhatsApp'a bağlı randevu formu</b></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Google puanı &amp; yorum sayısı ilk ekranda</b></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>6 hizmet başlığı, ayrı ayrı anlatımlı</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Çalışmalarınızdan galeri bölümü</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Adres, çalışma saatleri &amp; Google Haritalar</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Google kaydınızın düzeltilmesi</b></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>WhatsApp'ta şık link önizleme kartı</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Yerel SEO</b> — Karşıyaka kuaför &amp; röfle aramaları için</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Fiyat listesi bölümü (isterseniz açılır)</div>
+    </div>
+    <p style="font-size:.84rem;color:var(--muted);margin-top:16px">
+      Not: fiyatlarınızı siteye <b>bilerek koymadım.</b> Sizin işinizde fiyat saça göre değişiyor;
+      sabit bir liste yazmak hem sizi bağlar hem de eskiyince zarar verir. İsterseniz
+      "başlangıç fiyatı" formatında bir bölüm açarız — bölüm hazır bekliyor.
+    </p>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Yatırımınız</span>
+    <h2>Fiyatlandırma</h2>
+    <div class="price-hero">
+      <div class="col"><small>Kurulum · Tek Seferlik</small><b>40.000 ₺</b><span>Tasarım, içerik, randevu formu, Google kaydı düzeltme, alan adı, yayına alma</span></div>
+      <div class="divider"></div>
+      <div class="col"><small>Bakım · Aylık</small><b>5.000 ₺<small style="font-size:1rem;color:#a99074;font-weight:400"> /ay</small></b><span>Alan adı, hosting, güncellemeler &amp; öncelikli destek</span></div>
+    </div>
+    <div class="roi">
+      Şöyle bakalım: 638 değerlendirmeye ulaşmanız yıllar aldı. Site size <b>ayda tek bir
+      yeni renk müşterisi</b> kazandırsa, aylık bakımın karşılığını fazlasıyla çıkarır —
+      üstelik o müşteri düzenli gelmeye başlarsa kazanç bir aylık değil, yıllarca sürer.
+      Kurulum ise bir kereliktir; site ve alan adı sonrasında sizin malınız olur,
+      her ay yeniden ödemezsiniz.
+    </div>
+    <table>
+      <tr><th>Kalem</th><th>Açıklama</th><th style="text-align:right">Tutar</th></tr>
+      <tr><td>Web Sitesi Kurulumu</td><td>Özel tasarım, içerik yazımı, 6 hizmet başlığı, galeri, mobil uyum</td><td class="amt">24.000 ₺</td></tr>
+      <tr><td>Randevu Formu</td><td>İşlem + tarih seçimi, WhatsApp'a otomatik talep iletimi</td><td class="amt">8.000 ₺</td></tr>
+      <tr><td>Google Kaydı &amp; Yerel SEO</td><td>"Web sitesi" düğmesinin kendi adresinize bağlanması, kategori ve bilgilerin düzeltilmesi</td><td class="amt">8.000 ₺</td></tr>
+      <tr><td><b>Alan Adı</b></td><td><b>Sizin adınıza kayıtlı — harunkuafor.com şu an müsait</b></td><td class="amt">Dahil</td></tr>
+      <tr><td>Aylık Bakım Paketi</td><td>Alan adı + hosting + SSL, içerik &amp; galeri güncellemeleri, teknik destek</td><td class="amt">5.000 ₺/ay</td></tr>
+      <tr class="total"><td>Başlangıç Ödemesi</td><td>Kurulum + ilk ay bakım</td><td class="amt">45.000 ₺</td></tr>
+    </table>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Aylık 5.000 ₺ ne kapsıyor?</span>
+    <h3 style="margin-top:8px">Sizin uğraşacağınız hiçbir şey kalmıyor</h3>
+    <ul class="plain">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Alan adı yenileme takibi</b> — harunkuafor.com bir daha elden çıkmaz, yenileme tarihlerini biz takip ederiz. Aynı isimden bu kadar çok varken bu madde ilk sırada duruyor.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Hosting ve SSL yönetimi</b> — site 7/24 açık ve güvenli kalır.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Galeri güncellemeleri</b> — yeni çalışmalarınızı WhatsApp'tan gönderin, aynı hafta sitede olur. Renk işlerinde öncesi–sonrası kareleri en çok işi getiren şeydir.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>İçerik &amp; randevu formu bakımı</b> — hizmet listesi ya da saatler değişirse aynı gün güncellenir.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Ödeme Seçenekleri</span>
+    <h2>Size uygun olanı seçin</h2>
+    <div class="cards">
+      <div class="opt">
+        <div class="k">Seçenek A</div><h4>Sadece Kurulum</h4>
+        <div class="pr">40.000 ₺</div>
+        <p>Site ve alan adı sizin olur. Güncelleme ve teknik yönetim size ait.</p>
+      </div>
+      <div class="opt hl">
+        <div class="k">Seçenek B <span class="rec">Önerilen</span></div><h4>Kurulum + Bakım</h4>
+        <div class="pr">40.000 ₺ <small>+ 5.000 ₺/ay</small></div>
+        <p>Her şeyi biz yönetiriz. Siz sadece randevularla ilgilenirsiniz.</p>
+      </div>
+      <div class="opt">
+        <div class="k">Seçenek C</div><h4>Yıllık Anlaşma</h4>
+        <div class="pr">40.000 ₺ <small>+ 50.000 ₺/yıl</small></div>
+        <p>Bakımı yıllık peşin ödeyin, <b>2 ay hediye</b> (60.000 yerine 50.000 ₺).</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="terms">
+    <b>Şartlar:</b> Kurulum bedelinin %50'si iş başlangıcında, %50'si yayına alımında ödenir. Alan adı
+    Harun Kuaför adına kaydedilir ve bakım anlaşmasından bağımsız olarak size aittir;
+    <b>imza tarihinde harunkuafor.com'un hâlâ boşta olması şartına bağlıdır.</b> Google işletme kaydı
+    düzeltmesi, kaydın onay sürecine tabidir; başvuru ve takibi bize aittir. Aylık bakım, sitenin
+    yayına alındığı tarihte başlar ve aylık faturalandırılır; 30 gün önceden bildirimle sonlandırılabilir.
+    Bu teklif <b>14 gün</b> geçerlidir. Hizmet, MY BASKETO LTD (İngiltere) tarafından faturalandırılır;
+    belirtilen tutarlar nettir.
+  </div>
+
+  <div class="cta">
+    <div class="sign"><b>MY BASKETO LTD</b><span>Web Tasarım &amp; Dijital Çözümler · gozankaya@gmail.com</span></div>
+    <div class="btn">Onaylamak için ulaşın →</div>
+  </div>
+
+  <div class="foot">Bu teklif Harun Kuaför için özel olarak hazırlanmıştır · Canlı demo: gracoins.github.io/harun-kuafor</div>
+
+</div></div>
+</body>
+</html>
