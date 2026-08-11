@@ -205,13 +205,30 @@ section{padding:clamp(6rem,11vw,10.5rem) 0}
 .svc.hero-card .ic svg{stroke:var(--gold-lt)}
 .svc.hero-card .dur{color:var(--gold-lt)}
 
-/* gallery */
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:3.5rem}
+.rev{grid-column:span 1}
+.rev.feat{grid-column:span 3}
+.rev .core{padding:2rem 2.1rem;display:flex;flex-direction:column;gap:1.1rem;height:100%}
+.rev.feat .core{padding:2.6rem 2.8rem}
+.qstars{display:flex;gap:3px;color:var(--gold)}
+.qstars svg{width:15px;height:15px;fill:currentColor}
+.qstars.sm svg{width:12px;height:12px}
+.rev blockquote{font-size:.97rem;color:var(--muted);font-style:normal}
+.rev.feat blockquote{font-size:clamp(1.25rem,2.4vw,1.75rem);line-height:1.42;color:rgba(253,251,247,.9);
+  font-weight:300;letter-spacing:-.02em;max-width:60ch}
+.rev.feat .qstars{color:var(--gold-lt)}
+.rev figcaption{margin-top:auto;font-size:.85rem;font-weight:600}
+.rev figcaption span{font-weight:300;color:var(--muted)}
+.rev.feat figcaption{color:var(--cream)}
+.rev.feat figcaption span{color:rgba(253,251,247,.5)}
+
+/* gallery (fotograflar gelince acilacak) */
 .gal{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem;margin-top:3.5rem}
 .gitem{aspect-ratio:1;border-radius:1.25rem;overflow:hidden;background:var(--sand);position:relative;
   box-shadow:inset 0 0 0 1px var(--hair)}
 .gitem img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
 .gitem:hover img{transform:scale(1.05)}
-.gitem .ph{position:absolute;inset:0;display:grid;place-items:center;font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)}
 
 /* form */
 .book{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
@@ -261,6 +278,8 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.55re
   .fgrid{grid-template-columns:1fr}
   .book{grid-template-columns:1fr}
   .gal{grid-template-columns:repeat(2,1fr)}
+  .revs{grid-template-columns:1fr}
+  .rev.feat{grid-column:span 1}
   .bento{grid-template-columns:1fr}
   .svc,.svc.wide,.svc.hero-card{grid-column:span 1}
 }
@@ -290,7 +309,7 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.55re
     <nav class="nav-links">
       <a href="#hikaye">Hakkımızda</a>
       <a href="#hizmetler">Hizmetler</a>
-      <a href="#galeri">Galeri</a>
+      <a href="#yorumlar">Yorumlar</a>
       <a href="#iletisim">İletişim</a>
     </nav>
     <a class="pill" href="#randevu">Randevu
@@ -304,7 +323,7 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.55re
   <nav>
     <a href="#hikaye">Hakkımızda</a>
     <a href="#hizmetler">Hizmetler</a>
-    <a href="#galeri">Galeri</a>
+    <a href="#yorumlar">Yorumlar</a>
     <a href="#randevu">Randevu</a>
     <a href="#iletisim">İletişim</a>
   </nav>
@@ -444,23 +463,86 @@ footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.55re
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section class="band" id="galeri">
+  <!-- REVIEWS -->
+  <section class="band" id="yorumlar">
     <div class="wrap">
       <div class="head">
-        <span class="eyebrow rv"><i></i>Galeri</span>
-        <h2 class="serif rv" style="transition-delay:.06s">Çalışmalarımız</h2>
-        <p class="rv" style="transition-delay:.1s">Salonumuzdan ve uygulamalarımızdan kareler.</p>
+        <span class="eyebrow rv"><i></i>Yorumlar</span>
+        <h2 class="serif rv" style="transition-delay:.06s">Müşterilerimiz ne diyor</h2>
+        <p class="rv" style="transition-delay:.1s">
+          Google'da <strong style="font-weight:600;color:var(--ink)">638 değerlendirmede 4.8 puan</strong>.
+          Aşağıdakiler olduğu gibi alınmıştır.
+        </p>
       </div>
-      <div class="gal">
-        <figure class="gitem rv"><div class="ph">Fotoğraf</div></figure>
-        <figure class="gitem rv" style="transition-delay:.04s"><div class="ph">Fotoğraf</div></figure>
-        <figure class="gitem rv" style="transition-delay:.08s"><div class="ph">Fotoğraf</div></figure>
-        <figure class="gitem rv" style="transition-delay:.12s"><div class="ph">Fotoğraf</div></figure>
-        <figure class="gitem rv" style="transition-delay:.04s"><div class="ph">Fotoğraf</div></figure>
-        <figure class="gitem rv" style="transition-delay:.08s"><div class="ph">Fotoğraf</div></figure>
-        <figure class="gitem rv" style="transition-delay:.12s"><div class="ph">Fotoğraf</div></figure>
-        <figure class="gitem rv" style="transition-delay:.16s"><div class="ph">Fotoğraf</div></figure>
+
+      <div class="revs">
+        <figure class="rev feat shell dark rv">
+          <div class="core">
+            <div class="qstars">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+            </div>
+            <blockquote class="serif">“Ne istediğinizi tam olarak anlamadan işe başlamaması, olacak ve olmayacak
+              şeylerle ilgili sizi bilgilendirmesi, sabırla tüm sorularınıza destek olması tam anlamıyla
+              profesyonellik örneği. Başka bir kuaför tarafından komple sarıya boyanmış saçımı
+              iki ayrı işlemle sıfırdan röfle yapılmış hale getirdi.”</blockquote>
+            <figcaption>Emel S. <span>· Google · 3 hafta önce</span></figcaption>
+          </div>
+        </figure>
+
+        <figure class="rev shell rv" style="transition-delay:.05s">
+          <div class="core">
+            <div class="qstars sm">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+            </div>
+            <blockquote>“Kınalı olan saçlarımı 3 kere açmasına rağmen hiç yıpranma olmadığı gibi
+              istediğim renge kavuşmanın mutluluğunu yaşıyorum.”</blockquote>
+            <figcaption>Azat K. <span>· Google · 9 ay önce</span></figcaption>
+          </div>
+        </figure>
+
+        <figure class="rev shell rv" style="transition-delay:.1s">
+          <div class="core">
+            <div class="qstars sm">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+            </div>
+            <blockquote>“Daha önce başka bir kuaförde saçıma boya ve fön yapılmıştı, hiç beğenmedim.
+              Sağolsun tam da istediğim gibi boyadı ve fönledi.”</blockquote>
+            <figcaption>Makbule A. <span>· Google · 2 ay önce</span></figcaption>
+          </div>
+        </figure>
+
+        <figure class="rev shell rv" style="transition-delay:.15s">
+          <div class="core">
+            <div class="qstars sm">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+            </div>
+            <blockquote>“Çalışanlar çok samimi ve güler yüzlüler, içime sinmeyen her noktayı sorup
+              tek tek sıkılmadan ilgilendiler. 3 aydır devamlı müşteriyim.”</blockquote>
+            <figcaption>Elif <span>· Google · 6 ay önce</span></figcaption>
+          </div>
+        </figure>
+      </div>
+
+      <div style="margin-top:2.5rem" class="rv">
+        <a class="pill ghost" href="https://www.google.com/maps/search/Harun+Kuaför+Fikri+Altay+6183+Sokak+Karşıyaka+İzmir" target="_blank" rel="noopener">Tüm yorumları Google'da okuyun
+          <span class="knob"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M9 5h10v10"/></svg></span>
+        </a>
       </div>
     </div>
   </section>
