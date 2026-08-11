@@ -2,12 +2,12 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Harun Kuaför — Kuaför · Karşıyaka, İzmir</title>
-<meta name="description" content="Harun Kuaför — Karşıyaka, İzmir. Karşıyaka'da saç kesimi, renk ve röfle. İşe başlamadan önce ne olup ne olmayacağını konuşuyoruz. Randevu için WhatsApp'tan yazabilirsiniz.">
-<meta property="og:title" content="Harun Kuaför — Karşıyaka, İzmir">
-<meta property="og:description" content="Karşıyaka'da saç kesimi, renk ve röfle. İşe başlamadan önce ne olup ne olmayacağını konuşuyoruz.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harun Kuaför — Karşıyaka, İzmir · Saç Kesimi, Renk ve Röfle</title>
+<meta name="description" content="Karşıyaka Fikri Altay'da kuaför. Saç kesimi, boyama, röfle, renk açma ve renk düzeltme. Google'da 638 değerlendirmede 4.8 puan. İşe başlamadan önce ne olup ne olmayacağını konuşuyoruz.">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Harun Kuaför — Karşıyaka, İzmir">
+<meta property="og:description" content="Saç kesimi, renk ve röfle. 638 değerlendirmede 4.8 puan. Önce konuşuruz, sonra makas.">
 <meta property="og:url" content="https://gracoins.github.io/harun-kuafor/">
 <meta property="og:image" content="https://gracoins.github.io/harun-kuafor/og.png">
 <meta property="og:image:width" content="1200">
@@ -15,320 +15,569 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --dark:#2b2119; --dark-2:#3a2d22; --mid:#8a6a4f;
-  --gold:#c8a165; --gold-lt:#e2c79b; --accent:#e0a3ac;
-  --cream:#faf5ee; --cream-2:#f2e9dc; --sand:#e8dcc9;
-  --muted:#8d7f70; --line:#ece0cf;
-  --d:'Cormorant Garamond',Georgia,serif; --b:'Jost',system-ui,sans-serif;
-  --ease:cubic-bezier(.19,1,.22,1);
+  --cream:#FDFBF7; --cream-2:#F5F0E7; --sand:#E9E0D1;
+  --espresso:#2B2119; --espresso-2:#3E3125; --ink:#1A140F;
+  --gold:#A8813F; --gold-lt:#D9BC85; --clay:#8A6A4F;
+  --muted:#7C7065;
+  --hair:rgba(43,33,25,.09);
+  --hair-lt:rgba(255,255,255,.14);
+  --ease:cubic-bezier(0.32,0.72,0,1);
+  --shell:1.75rem;
+  --pad:2px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--dark);font-family:var(--b);font-weight:300;
-  font-size:16px;line-height:1.75;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,.d{font-family:var(--d);font-weight:400;letter-spacing:-.01em;line-height:1.15}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  background:var(--cream); color:var(--ink);
+  font-family:'Plus Jakarta Sans',system-ui,sans-serif; font-weight:300;
+  line-height:1.7; letter-spacing:-.005em;
+  overflow-x:hidden;
+}
 img{max-width:100%;display:block}
-a{color:inherit}
-.w{width:min(1160px,92vw);margin:0 auto}
-.rv{opacity:0;transform:translateY(26px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.rv.in{opacity:1;transform:none}
+a{color:inherit;text-decoration:none}
 
-/* ── header ── */
-header{position:fixed;top:0;left:0;right:0;z-index:60;padding:20px 0;transition:.45s var(--ease)}
-header.s{background:rgba(250,245,238,.94);backdrop-filter:blur(14px);
-  padding:12px 0;box-shadow:0 1px 0 var(--line)}
-.hrow{display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{font-family:var(--d);font-size:1.32rem;letter-spacing:.03em;color:var(--cream);transition:.45s var(--ease);
-  display:inline-block;padding:6px 0;margin:-6px 0}
-header.s .logo{color:var(--dark)}
-nav{display:flex;gap:30px;font-size:.83rem;letter-spacing:.1em;text-transform:uppercase}
-nav a{color:rgba(255,255,255,.86);text-decoration:none;transition:.3s}
-header.s nav a{color:var(--muted)}
-nav a:hover{color:var(--gold)}
-.hcta{border:1px solid rgba(255,255,255,.5);color:#fff;padding:9px 22px;border-radius:100px;
-  font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;transition:.35s}
-header.s .hcta{border-color:var(--gold);color:var(--gold)}
-.hcta:hover{background:var(--gold);border-color:var(--gold);color:#fff}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;
-  padding:15px 12px;margin:-15px -12px;justify-content:center}
-.burger i{width:24px;height:1.5px;background:#fff;display:block;transition:.3s}
-header.s .burger i{background:var(--dark)}
+/* film grain — fixed, pointer-events none (perf guardrail) */
+.grain{
+  position:fixed; inset:0; z-index:60; pointer-events:none; opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 
-/* ── hero ── */
-.hero{min-height:100svh;display:grid;place-items:center;position:relative;text-align:center;
-  background:linear-gradient(160deg,var(--dark) 0%,var(--dark-2) 55%,var(--mid) 100%);
-  color:var(--cream);padding:120px 0 80px;overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0;opacity:.5;
-  background:radial-gradient(ellipse at 22% 18%,rgba(200,161,101,.3),transparent 55%),
-             radial-gradient(ellipse at 82% 78%,rgba(224,163,172,.24),transparent 58%)}
-.hero>*{position:relative;z-index:2}
-.hkicker{font-size:.75rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:26px}
-.hero h1{font-size:clamp(2.7rem,8vw,5.4rem);margin-bottom:20px}
-.hero h1 em{font-style:italic;color:var(--gold-lt)}
-.hsub{font-size:clamp(1rem,2.1vw,1.16rem);color:rgba(255,255,255,.8);max-width:600px;
-  margin:0 auto 20px;font-weight:300}
-.stars{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.24);
-  border-radius:100px;padding:9px 20px;font-size:.86rem;color:rgba(255,255,255,.9);margin-bottom:34px}
-.stars b{color:var(--gold-lt);font-weight:600}
-.hbtns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:16px 36px;border-radius:100px;
-  font-size:.83rem;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;
-  font-weight:500;transition:.35s var(--ease);border:1px solid transparent;cursor:pointer;font-family:var(--b)}
-.btn-g{background:var(--gold);color:#fff}
-.btn-g:hover{background:var(--gold-lt);transform:translateY(-2px)}
-.btn-o{border-color:rgba(255,255,255,.45);color:#fff}
-.btn-o:hover{background:#fff;color:var(--dark)}
-.scroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);z-index:2;
-  width:1px;height:52px;background:linear-gradient(var(--gold),transparent)}
+.wrap{width:min(1220px,100% - 3rem);margin-inline:auto}
+.serif{font-family:'Fraunces',Georgia,serif;font-weight:400;letter-spacing:-.03em;line-height:.98}
+.it{font-style:italic;font-weight:300}
 
-/* ── sections ── */
-section{padding:clamp(70px,9vw,120px) 0}
-.eyebrow{font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);
-  margin-bottom:16px;display:block}
-.stitle{font-size:clamp(1.9rem,4.4vw,3rem);margin-bottom:18px}
-.slead{color:var(--muted);max-width:640px;font-size:1.03rem}
-.center{text-align:center}.center .slead{margin:0 auto}
+/* ── eyebrow ───────────────────────────────── */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:.5rem;
+  border-radius:999px;padding:.35rem .85rem;
+  font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;
+  color:var(--clay);background:rgba(168,129,63,.08);
+  box-shadow:inset 0 0 0 1px rgba(168,129,63,.16);
+}
+.eyebrow.on-dark{color:var(--gold-lt);background:rgba(217,188,133,.1);box-shadow:inset 0 0 0 1px rgba(217,188,133,.2)}
+.eyebrow i{width:4px;height:4px;border-radius:999px;background:currentColor;font-style:normal;flex:none}
 
-.imza{background:var(--cream-2)}
-.igrid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,6vw,80px);align-items:center}
-.iphoto{aspect-ratio:4/5;background:var(--sand);border-radius:3px;overflow:hidden;position:relative}
-.iphoto img{width:100%;height:100%;object-fit:cover}
-.iphoto::after{content:"";position:absolute;inset:11px;border:1px solid rgba(200,161,101,.4);pointer-events:none}
+/* ── floating island nav ───────────────────── */
+.nav{position:fixed;inset:1.5rem 0 auto;z-index:50;display:flex;justify-content:center;pointer-events:none}
+.nav-pill{
+  pointer-events:auto;display:flex;align-items:center;gap:1.75rem;
+  width:max-content;max-width:calc(100vw - 2rem);
+  padding:.55rem .55rem .55rem 1.5rem;border-radius:999px;
+  background:rgba(253,251,247,.72);-webkit-backdrop-filter:blur(22px) saturate(180%);backdrop-filter:blur(22px) saturate(180%);
+  box-shadow:inset 0 0 0 1px rgba(43,33,25,.07), 0 18px 40px -26px rgba(43,33,25,.5);
+  transition:transform .7s var(--ease), box-shadow .7s var(--ease);
+}
+.brand{font-family:'Fraunces',serif;font-size:1.05rem;letter-spacing:-.02em;white-space:nowrap}
+.brand em{font-style:italic;color:var(--clay)}
+.nav-links{display:flex;gap:1.5rem;font-size:.8rem;letter-spacing:.02em;color:var(--muted)}
+.nav-links a{position:relative;padding:.2rem 0;transition:color .5s var(--ease)}
+.nav-links a::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:var(--clay);transform:scaleX(0);transform-origin:right;transition:transform .6s var(--ease)}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
 
-.svc{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:22px;margin-top:52px}
-.card{background:var(--cream-2);border:1px solid var(--line);border-radius:3px;padding:34px 30px;
-  transition:.45s var(--ease)}
-.card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 18px 44px rgba(0,0,0,.07)}
-.card h3{font-size:1.28rem;margin-bottom:11px}
-.card p{color:var(--muted);font-size:.94rem}
-.card .sure{display:inline-block;margin-top:15px;font-size:.72rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--gold)}
+/* button-in-button pill */
+.pill{
+  --bg:var(--espresso); --fg:#fff;
+  display:inline-flex;align-items:center;gap:.65rem;
+  background:var(--bg);color:var(--fg);
+  border:0;cursor:pointer;font:inherit;font-weight:500;font-size:.82rem;
+  padding:.4rem .4rem .4rem 1.15rem;border-radius:999px;
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.14), 0 12px 26px -18px rgba(43,33,25,.9);
+  transition:transform .6s var(--ease), box-shadow .6s var(--ease), background .6s var(--ease);
+}
+.pill .knob{
+  width:2rem;height:2rem;border-radius:999px;flex:none;
+  background:rgba(255,255,255,.13);
+  display:grid;place-items:center;
+  transition:transform .6s var(--ease), background .6s var(--ease);
+}
+.pill .knob svg{width:13px;height:13px;stroke:currentColor;stroke-width:1.1;fill:none}
+.pill:hover .knob{transform:translate(3px,-1px) scale(1.06);background:rgba(255,255,255,.2)}
+.pill:active{transform:scale(.98)}
+.pill.lg{font-size:.92rem;padding:.5rem .5rem .5rem 1.5rem}
+.pill.lg .knob{width:2.5rem;height:2.5rem}
+.pill.ghost{--bg:transparent;--fg:var(--ink);box-shadow:inset 0 0 0 1px var(--hair)}
+.pill.ghost .knob{background:rgba(43,33,25,.06)}
+.pill.ghost:hover .knob{background:rgba(43,33,25,.1)}
 
-.fiyat{background:var(--dark);color:var(--cream)}
-.fiyat .stitle,.fiyat .eyebrow{color:var(--cream)}.fiyat .eyebrow{color:var(--gold-lt)}
-.fiyat .slead{color:rgba(255,255,255,.62)}
-.tabs{display:flex;gap:9px;justify-content:center;flex-wrap:wrap;margin:42px 0 34px}
-.tab{background:transparent;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.72);
-  border-radius:100px;padding:11px 26px;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;
-  cursor:pointer;font-family:var(--b);transition:.3s}
-.tab.on{background:var(--gold);border-color:var(--gold);color:#fff}
-.plist{max-width:760px;margin:0 auto;display:none}
-.plist.on{display:block}
-.prow{display:flex;align-items:baseline;gap:16px;padding:17px 0;border-bottom:1px solid rgba(255,255,255,.11)}
-.pn{font-size:1.02rem}
-.pd{flex:1;border-bottom:1px dotted rgba(255,255,255,.24);transform:translateY(-4px)}
-.pp{font-family:var(--d);font-size:1.2rem;color:var(--gold-lt);white-space:nowrap}
-.pnote{text-align:center;color:rgba(255,255,255,.5);font-size:.86rem;margin-top:26px}
+.burger{display:none;width:2.6rem;height:2.6rem;border-radius:999px;border:0;background:rgba(43,33,25,.06);cursor:pointer;position:relative;flex:none}
+.burger span{position:absolute;left:50%;width:15px;height:1.3px;background:var(--ink);border-radius:2px;transform-origin:center;
+  transition:transform .7s var(--ease), opacity .4s var(--ease)}
+.burger span:nth-child(1){top:calc(50% - 4px);transform:translateX(-50%)}
+.burger span:nth-child(2){top:calc(50% + 4px);transform:translateX(-50%)}
+body.menu-open .burger span:nth-child(1){transform:translateX(-50%) translateY(4px) rotate(45deg)}
+body.menu-open .burger span:nth-child(2){transform:translateX(-50%) translateY(-4px) rotate(-45deg)}
 
-.randevu{background:var(--cream-2)}
-.rgrid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(34px,6vw,72px);align-items:start}
-.form{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:clamp(26px,4vw,40px)}
-.fld{margin-bottom:18px}
-.fld label{display:block;font-size:.73rem;letter-spacing:.15em;text-transform:uppercase;
-  color:var(--muted);margin-bottom:8px}
-.fld input,.fld select,.fld textarea{width:100%;background:var(--cream-2);border:1px solid var(--line);
-  border-radius:3px;padding:14px 16px;font-family:var(--b);font-size:.97rem;color:var(--dark);
-  outline:none;transition:.3s;font-weight:300}
-.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--gold);background:#fff}
-.fld textarea{min-height:92px;resize:vertical}
-.form .btn{width:100%;justify-content:center;margin-top:6px}
-.rnote{font-size:.83rem;color:var(--muted);text-align:center;margin-top:14px}
-.rpoints{list-style:none}
-.rpoints li{display:flex;gap:15px;padding:19px 0;border-bottom:1px solid var(--line)}
-.rpoints b{font-family:var(--d);font-size:1.5rem;color:var(--gold);line-height:1;flex:none;width:34px}
-.rpoints span{font-size:.95rem;color:var(--muted)}
-.rpoints strong{display:block;color:var(--dark);font-weight:500;margin-bottom:3px;font-size:1rem}
+/* full-screen menu overlay */
+.overlay{
+  position:fixed;inset:0;z-index:45;display:grid;place-items:center;
+  background:rgba(253,251,247,.82);-webkit-backdrop-filter:blur(30px);backdrop-filter:blur(30px);
+  opacity:0;visibility:hidden;transition:opacity .7s var(--ease), visibility .7s var(--ease);
+}
+body.menu-open .overlay{opacity:1;visibility:visible}
+.overlay nav{display:flex;flex-direction:column;gap:.35rem;text-align:center}
+.overlay nav a{
+  font-family:'Fraunces',serif;font-size:clamp(2.1rem,9vw,3rem);letter-spacing:-.03em;
+  opacity:0;transform:translateY(2.5rem);
+  transition:opacity .8s var(--ease), transform .8s var(--ease);
+}
+body.menu-open .overlay nav a{opacity:1;transform:translateY(0)}
+body.menu-open .overlay nav a:nth-child(1){transition-delay:.1s}
+body.menu-open .overlay nav a:nth-child(2){transition-delay:.16s}
+body.menu-open .overlay nav a:nth-child(3){transition-delay:.22s}
+body.menu-open .overlay nav a:nth-child(4){transition-delay:.28s}
+body.menu-open .overlay nav a:nth-child(5){transition-delay:.34s}
+.overlay .ov-foot{position:absolute;bottom:2.5rem;left:0;right:0;text-align:center;font-size:.82rem;color:var(--muted)}
 
-.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:12px;margin-top:48px}
-.gitem{aspect-ratio:1;background:var(--sand);overflow:hidden;cursor:pointer;position:relative}
-.gitem img{width:100%;height:100%;object-fit:cover;transition:.8s var(--ease)}
-.gitem:hover img{transform:scale(1.07)}
-.lb{position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:100;display:none;place-items:center;padding:26px}
-.lb.on{display:grid}
-.lb img{max-width:92vw;max-height:88vh;object-fit:contain}
-.lbx{position:absolute;top:22px;right:28px;color:#fff;font-size:2.2rem;cursor:pointer;line-height:1}
+/* ── double bezel ──────────────────────────── */
+.shell{
+  background:rgba(43,33,25,.035);
+  box-shadow:inset 0 0 0 1px var(--hair);
+  border-radius:var(--shell);padding:var(--pad);
+}
+.core{
+  background:var(--cream);border-radius:calc(var(--shell) - var(--pad));
+  box-shadow:inset 0 1px 1px rgba(255,255,255,.7), 0 24px 50px -40px rgba(43,33,25,.55);
+  height:100%;
+}
+.shell.dark{background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px var(--hair-lt)}
+.shell.dark .core{background:var(--espresso);color:var(--cream);box-shadow:inset 0 1px 1px rgba(255,255,255,.12), 0 30px 60px -40px rgba(0,0,0,.8)}
 
-.ekip{background:var(--cream-2)}
-.egrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:26px;margin-top:48px}
-.eitem{text-align:center}
-.eph{aspect-ratio:3/4;background:var(--sand);border-radius:3px;overflow:hidden;margin-bottom:16px}
-.eph img{width:100%;height:100%;object-fit:cover}
-.eitem h3{font-size:1.14rem;margin-bottom:3px}
-.eitem span{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+/* ── reveal ────────────────────────────────── */
+.rv{opacity:0;transform:translateY(3rem);filter:blur(10px);
+  transition:opacity .9s var(--ease), transform .9s var(--ease), filter .9s var(--ease)}
+.rv.in{opacity:1;transform:none;filter:blur(0)}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;filter:none;transition:none}}
 
-footer{background:var(--dark);color:rgba(255,255,255,.72);padding:clamp(60px,7vw,90px) 0 34px}
-.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:clamp(30px,5vw,64px)}
-footer h3{color:var(--cream);font-size:1.5rem;margin-bottom:16px}
-footer h4{font-size:.73rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-lt);
-  margin-bottom:17px;font-family:var(--b);font-weight:500}
-footer a{color:rgba(255,255,255,.72);text-decoration:none;transition:.3s;display:block;
-  padding:6px 0;margin-bottom:1px}
+/* ── hero — editorial split ────────────────── */
+.hero{min-height:100dvh;display:flex;align-items:center;padding:9rem 0 6rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;width:60rem;height:60rem;right:-22rem;top:-20rem;border-radius:999px;
+  background:radial-gradient(circle,rgba(168,129,63,.13),transparent 62%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,5rem);align-items:center;position:relative}
+h1{font-size:clamp(3.2rem,8.2vw,6.4rem);margin:1.6rem 0 0}
+h1 .l2{display:block;color:var(--clay)}
+.hero p.lede{font-size:clamp(1rem,1.35vw,1.14rem);color:var(--muted);max-width:34ch;margin-top:1.8rem}
+.hero-cta{display:flex;flex-wrap:wrap;gap:.7rem;margin-top:2.6rem}
+
+.proof{padding:2.4rem}
+.rate{display:flex;align-items:baseline;gap:.7rem}
+.rate b{font-family:'Fraunces',serif;font-size:3.4rem;font-weight:500;letter-spacing:-.04em;line-height:1}
+.stars{display:flex;gap:2px;color:var(--gold)}
+.stars svg{width:14px;height:14px;fill:currentColor}
+.rate span{font-size:.8rem;color:var(--muted)}
+.divider{height:1px;background:var(--hair);margin:1.8rem 0}
+.kv{display:flex;justify-content:space-between;gap:1rem;font-size:.87rem;padding:.55rem 0}
+.kv dt{color:var(--muted)}
+.kv dd{text-align:right;font-weight:500}
+.kv dd.off{color:var(--clay)}
+
+/* ── sections ──────────────────────────────── */
+section{padding:clamp(6rem,11vw,10.5rem) 0}
+.band{background:var(--cream-2)}
+.head{max-width:56ch}
+.head h2{font-size:clamp(2.2rem,5vw,3.7rem);margin:1.4rem 0 0}
+.head p{color:var(--muted);margin-top:1.4rem;font-size:1.03rem}
+
+/* statement */
+.statement{text-align:center;max-width:22ch;margin-inline:auto;font-size:clamp(2rem,5.4vw,3.9rem)}
+.statement em{font-style:italic;color:var(--clay)}
+.sub{text-align:center;max-width:52ch;margin:2rem auto 0;color:var(--muted)}
+
+/* bento */
+.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem;margin-top:3.5rem}
+.svc{grid-column:span 2}
+.svc.wide{grid-column:span 3}
+.svc.hero-card{grid-column:span 6}
+.svc .core{padding:2rem 2rem 2.2rem;display:flex;flex-direction:column;gap:.85rem}
+.svc .ic{width:2.6rem;height:2.6rem;border-radius:999px;display:grid;place-items:center;
+  background:rgba(168,129,63,.09);box-shadow:inset 0 0 0 1px rgba(168,129,63,.15);margin-bottom:.4rem}
+.svc .ic svg{width:16px;height:16px;stroke:var(--clay);stroke-width:1;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-family:'Fraunces',serif;font-weight:400;font-size:1.5rem;letter-spacing:-.02em;line-height:1.15}
+.svc p{font-size:.92rem;color:var(--muted)}
+.svc .dur{margin-top:auto;padding-top:1rem;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--clay)}
+.svc.hero-card .core{background:var(--espresso);color:var(--cream)}
+.svc.hero-card p{color:rgba(253,251,247,.62);max-width:52ch}
+.svc.hero-card h3{font-size:clamp(1.8rem,3.4vw,2.5rem)}
+.svc.hero-card .ic{background:rgba(217,188,133,.12);box-shadow:inset 0 0 0 1px rgba(217,188,133,.22)}
+.svc.hero-card .ic svg{stroke:var(--gold-lt)}
+.svc.hero-card .dur{color:var(--gold-lt)}
+
+/* gallery */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:.85rem;margin-top:3.5rem}
+.gitem{aspect-ratio:1;border-radius:1.25rem;overflow:hidden;background:var(--sand);position:relative;
+  box-shadow:inset 0 0 0 1px var(--hair)}
+.gitem img{width:100%;height:100%;object-fit:cover;transition:transform 1.1s var(--ease)}
+.gitem:hover img{transform:scale(1.05)}
+.gitem .ph{position:absolute;inset:0;display:grid;place-items:center;font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted)}
+
+/* form */
+.book{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(2rem,5vw,4.5rem);align-items:start}
+.steps{list-style:none;margin-top:2.5rem;display:flex;flex-direction:column;gap:1.6rem}
+.steps li{display:flex;gap:1.1rem}
+.steps b{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--clay);flex:none;width:1.8rem;font-weight:400}
+.steps strong{display:block;font-weight:600;font-size:.98rem}
+.steps span{font-size:.9rem;color:var(--muted)}
+.form .core{padding:2.2rem}
+.field{margin-bottom:1.15rem}
+label{display:block;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
+input,select,textarea{
+  width:100%;font:inherit;font-size:.95rem;color:var(--ink);
+  background:rgba(43,33,25,.028);border:0;border-radius:.9rem;padding:.85rem 1rem;
+  box-shadow:inset 0 0 0 1px var(--hair);
+  transition:box-shadow .5s var(--ease), background .5s var(--ease);
+}
+textarea{resize:vertical;min-height:5.5rem}
+input:focus,select:focus,textarea:focus{outline:0;background:transparent;box-shadow:inset 0 0 0 1.4px rgba(168,129,63,.5)}
+select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%237C7065' stroke-width='1.2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.note{font-size:.76rem;color:var(--muted);margin-top:1rem}
+
+/* footer */
+footer{background:var(--espresso);color:var(--cream);padding:clamp(5rem,9vw,7rem) 0 3rem}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:3rem}
+footer h3{font-family:'Fraunces',serif;font-weight:400;font-size:2rem;letter-spacing:-.02em}
+footer p,footer a,footer li{color:rgba(253,251,247,.62);font-size:.92rem}
+footer a{transition:color .5s var(--ease)}
 footer a:hover{color:var(--gold-lt)}
-footer p{font-size:.94rem;margin-bottom:9px}
-.fbot{margin-top:52px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12);
-  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.82rem;color:rgba(255,255,255,.42)}
+.fh{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:1.1rem}
+footer ul{list-style:none;display:flex;flex-direction:column;gap:.55rem}
+footer ul a{display:inline-flex;align-items:center;min-height:44px;margin:-.55rem 0}
+.brand{display:inline-flex;align-items:center;gap:.3em;min-height:40px}
+.fbot{margin-top:4rem;padding-top:1.8rem;border-top:1px solid var(--hair-lt);display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.78rem;color:rgba(253,251,247,.42)}
 
-.wafab{position:fixed;right:20px;bottom:20px;z-index:70;width:56px;height:56px;border-radius:50%;
-  background:#25d366;display:grid;place-items:center;box-shadow:0 8px 26px rgba(37,211,102,.42);
-  text-decoration:none;transition:.35s var(--ease)}
-.wafab:hover{transform:scale(1.09)}
-.wafab svg{width:29px;height:29px;fill:#fff}
+/* floating whatsapp */
+.wa{position:fixed;right:1.25rem;bottom:1.25rem;z-index:40;width:3.4rem;height:3.4rem;border-radius:999px;
+  background:#25D366;display:grid;place-items:center;
+  box-shadow:0 16px 34px -14px rgba(37,211,102,.75);
+  transition:transform .6s var(--ease)}
+.wa:hover{transform:scale(1.06) translateY(-2px)}
+.wa svg{width:20px;height:20px;fill:#fff}
 
-@media(max-width:880px){
-  nav,.hcta{display:none}
-  .burger{display:flex;position:relative;z-index:90}
-  header{z-index:90}
-  nav.open{display:flex;position:fixed;inset:0;background:var(--dark);flex-direction:column;
-    justify-content:center;align-items:center;gap:34px;font-size:1.1rem;z-index:80}
-  nav.open a{color:#fff}
-  /* menü açıkken: arka plan kaymasın, hamburger çarpıya dönüşsün ve tıklanabilir kalsın */
-  body.menu-acik{overflow:hidden}
-  body.menu-acik header,body.menu-acik header.s{background:transparent;box-shadow:none}
-  body.menu-acik .logo,body.menu-acik header.s .logo{color:var(--cream)}
-  body.menu-acik .burger i,body.menu-acik header.s .burger i{background:#fff}
-  body.menu-acik .burger i:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-  body.menu-acik .burger i:nth-child(2){opacity:0}
-  body.menu-acik .burger i:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
-  .igrid,.rgrid,.fgrid{grid-template-columns:1fr}
-  .iphoto{max-width:400px;margin:0 auto}
+/* ── mobile collapse ───────────────────────── */
+@media (max-width:900px){
+  .fgrid{grid-template-columns:1fr}
+  .book{grid-template-columns:1fr}
+  .gal{grid-template-columns:repeat(2,1fr)}
+  .bento{grid-template-columns:1fr}
+  .svc,.svc.wide,.svc.hero-card{grid-column:span 1}
+}
+@media (max-width:768px){
+  .wrap{width:min(1220px,100% - 2rem)}
+  .nav-links,.nav .pill{display:none}
+  .burger{display:block}
+  .nav-pill{width:calc(100vw - 2rem);justify-content:space-between;padding-left:1.25rem}
+  .hero{padding:7.5rem 0 4rem;min-height:auto}
+  .hero-grid{grid-template-columns:1fr;gap:2.5rem}
+  .hero p.lede{max-width:none}
+  .proof{padding:1.75rem}
+  .rate b{font-size:2.8rem}
+  section{padding:4.5rem 0}
+  .row{grid-template-columns:1fr}
+  .form .core{padding:1.6rem}
+  .statement{max-width:none}
 }
 </style>
 </head>
 <body>
+<div class="grain" aria-hidden="true"></div>
 
-<header id="hd"><div class="w hrow">
-  <a href="#" class="logo">Harun</a>
-  <nav id="nv"><a href="#hakkimizda">Hakkımızda</a><a href="#hizmetler">Hizmetler</a><a href="#randevu">Randevu</a><a href="#galeri">Galeri</a><a href="#iletisim">İletişim</a></nav>
-  <a class="hcta" href="https://wa.me/905051158132" target="_blank">Randevu</a>
-  <div class="burger" onclick="document.getElementById('nv').classList.toggle('open');document.body.classList.toggle('menu-acik')"><i></i><i></i><i></i></div>
-</div></header>
-
-<div class="hero">
-  <div class="w">
-    <div class="hkicker">Karşıyaka · İzmir</div>
-    <h1>Harun <em>Kuaför</em></h1>
-    <p class="hsub">Karşıyaka'da saç kesimi, renk ve röfle. İşe başlamadan önce ne olup ne olmayacağını konuşuyoruz.</p>
-    <div class="stars">★★★★★ <b>4.8</b> · 638 Google değerlendirmesi</div>
-    <div class="hbtns">
-      <a class="btn btn-g" href="https://wa.me/905051158132" target="_blank">WhatsApp'tan randevu</a>
-      <a class="btn btn-o" href="#hizmetler">Hizmetleri gör</a>
-    </div>
+<header class="nav">
+  <div class="nav-pill">
+    <a class="brand" href="#top">Harun <em>Kuaför</em></a>
+    <nav class="nav-links">
+      <a href="#hikaye">Hakkımızda</a>
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+    <a class="pill" href="#randevu">Randevu
+      <span class="knob"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M9 5h10v10"/></svg></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Menü" aria-expanded="false"><span></span><span></span></button>
   </div>
-  <div class="scroll"></div>
+</header>
+
+<div class="overlay" id="overlay">
+  <nav>
+    <a href="#hikaye">Hakkımızda</a>
+    <a href="#hizmetler">Hizmetler</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#randevu">Randevu</a>
+    <a href="#iletisim">İletişim</a>
+  </nav>
+  <div class="ov-foot">Fikri Altay, Karşıyaka · 0505 115 81 32</div>
 </div>
 
-<section class="imza" id="hakkimizda"><div class="w igrid">
-  <div class="iphoto rv"><img src="foto/renk-1.jpg" alt="Harun Kuaför" loading="lazy" ></div>
-  <div class="rv">
-    <span class="eyebrow">Hakkımızda</span>
-    <h2 class="stitle">Önce konuşuruz, sonra makas</h2>
-    <p class="slead">Harun Kuaför, Karşıyaka Fikri Altay'da hizmet veren bir kuaför salonu. İşimizin ağırlığı renk: boyama, röfle, renk açma ve başka yerde istenmeyen bir sonuç alınmış saçların toparlanması. Yıllar içinde en çok duyduğumuz teşekkür de buradan geliyor — kınalı saçı yıpratmadan açmak, komple boyanmış bir saçı adım adım istenen tona getirmek sabır isteyen işler ve biz bunları aceleye getirmiyoruz. Koltuğa oturduğunuzda ilk yaptığımız şey saçınıza bakıp ne istediğinizi anlamak; olacak olanı da olmayacak olanı da baştan söylüyoruz. Bir işlem tek seansta mümkün değilse, bunu size en başta söyleriz.</p>
-    <div style="display:flex;gap:26px;flex-wrap:wrap;margin-top:30px"><div><b style="font-family:var(--d);font-size:2rem;color:var(--gold);display:block;line-height:1.1">Karşıyaka</b><span style="font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Fikri Altay</span></div><div><b style="font-family:var(--d);font-size:2rem;color:var(--gold);display:block;line-height:1.1">Renk</b><span style="font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Ağırlıklı uzmanlık</span></div><div><b style="font-family:var(--d);font-size:2rem;color:var(--gold);display:block;line-height:1.1">Pazar</b><span style="font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)">Açığız</span></div></div>
-  </div>
-</div></section>
+<main id="top">
 
-<section id="hizmetler"><div class="w">
-  <div class="center rv">
-    <span class="eyebrow">Hizmetlerimiz</span>
-    <h2 class="stitle">Sunduğumuz hizmetler</h2>
-    <p class="slead">Her işlem öncesinde saçınıza bakıp neyin mümkün olduğunu birlikte konuşuyoruz.</p>
-  </div>
-  <div class="svc"><div class="card rv"><h3>Ön Görüşme &amp; Saç Analizi</h3><p>İşleme başlamadan önce saçınızın durumunu değerlendirir, ne istediğinizi netleştirir, olacak ve olmayacak olanı baştan söyleriz. Ücretsizdir.</p><span class="sure">10 – 15 dk</span></div><div class="card rv"><h3>Saç Kesimi</h3><p>Saç yapınıza ve günlük olarak nasıl kullandığınıza göre planlanan kesim.</p><span class="sure">30 – 60 dk</span></div><div class="card rv"><h3>Saç Boyama</h3><p>Dip boya, komple renk ve ton değişimi. Hedef rengi işlem öncesinde birlikte belirliyoruz.</p><span class="sure">90 – 150 dk</span></div><div class="card rv"><h3>Röfle &amp; Renk Açma</h3><p>Röfle ve açma işlemleri. Saçın taşıyabileceği kadarını yaparız; gerekiyorsa birden fazla seansa yayarız.</p><span class="sure">150 – 240 dk</span></div><div class="card rv"><h3>Renk Düzeltme</h3><p>Başka yerde istenmeyen bir sonuç alınmış ya da kınalı saçların adım adım toparlanması. Tek seansta bitmeyebilir, planı en baştan çıkarırız.</p><span class="sure">Saça göre planlanır</span></div><div class="card rv"><h3>Fön &amp; Şekillendirme</h3><p>Günlük fön, dalga ve şekillendirme uygulamaları.</p><span class="sure">30 – 60 dk</span></div></div>
-</div></section>
+  <!-- HERO — editorial split -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow rv"><i></i>Karşıyaka · İzmir</span>
+        <h1 class="serif rv" style="transition-delay:.06s">Önce konuşuruz,<span class="l2 it">sonra makas.</span></h1>
+        <p class="lede rv" style="transition-delay:.12s">
+          Saç kesimi, renk ve röfle. Koltuğa oturduğunuzda ilk yaptığımız şey saçınıza bakmak —
+          olacak olanı da olmayacak olanı da baştan söyleriz.
+        </p>
+        <div class="hero-cta rv" style="transition-delay:.18s">
+          <a class="pill lg" href="#randevu">Randevu alın
+            <span class="knob"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M9 5h10v10"/></svg></span>
+          </a>
+          <a class="pill lg ghost" href="#hizmetler">Hizmetler
+            <span class="knob"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
 
-
-
-<section class="randevu" id="randevu"><div class="w rgrid">
-  <div class="rv">
-    <span class="eyebrow">Randevu</span>
-    <h2 class="stitle">Yerinizi ayırtın</h2>
-    <p class="slead" style="margin-bottom:26px">Formu doldurun, WhatsApp'ta hazır mesaj olarak açılsın. Onaylayıp gönderin, size dönüş yapalım.</p>
-    <ul class="rpoints">
-      <li><b>01</b><span><strong>Hızlı dönüş</strong>Mesajınıza aynı gün içinde yanıt veriyoruz.</span></li>
-      <li><b>02</b><span><strong>Ön görüşme</strong>Uygulama öncesi ihtiyacınızı birlikte belirliyoruz.</span></li>
-      <li><b>03</b><span><strong>Net fiyat</strong>Fiyatı işlem öncesinde konuşuyoruz, sürpriz yok.</span></li>
-    </ul>
-  </div>
-  <div class="form rv">
-    <div class="fld"><label>Ad Soyad</label><input id="f_ad" placeholder="Adınız ve soyadınız"></div>
-    <div class="fld"><label>Telefon</label><input id="f_tel" placeholder="05xx xxx xx xx"></div>
-    <div class="fld"><label>Hizmet</label><select id="f_hiz"><option>Ön Görüşme &amp; Saç Analizi</option><option>Saç Kesimi</option><option>Saç Boyama</option><option>Röfle &amp; Renk Açma</option><option>Renk Düzeltme</option><option>Fön &amp; Şekillendirme</option><option>Diğer / emin değilim</option></select></div>
-    <div class="fld"><label>Tercih ettiğiniz gün / saat</label><input id="f_zaman" placeholder="Örn. Cuma öğleden sonra"></div>
-    <div class="fld"><label>Eklemek istedikleriniz</label><textarea id="f_not" placeholder="İsteğe bağlı"></textarea></div>
-    <a class="btn btn-g" id="f_gonder" href="#" target="_blank">WhatsApp'ta gönder</a>
-    <p class="rnote">Form bilgileri kaydedilmez, doğrudan WhatsApp mesajına dönüşür.</p>
-  </div>
-</div></section>
-
-<section id="galeri"><div class="w">
-  <div class="center rv">
-    <span class="eyebrow">Galeri</span>
-    <h2 class="stitle">Çalışmalarımız</h2>
-    <p class="slead">Salonumuzdan ve çalışmalarımızdan kareler.</p>
-  </div>
-  <div class="gal"><div class="gitem rv"><img src="foto/renk-1.jpg" alt="Harun Kuaför" loading="lazy" ></div><div class="gitem rv"><img src="foto/rofle-1.jpg" alt="Harun Kuaför" loading="lazy" ></div><div class="gitem rv"><img src="foto/kesim-1.jpg" alt="Harun Kuaför" loading="lazy" ></div><div class="gitem rv"><img src="foto/renk-2.jpg" alt="Harun Kuaför" loading="lazy" ></div><div class="gitem rv"><img src="foto/salon-1.jpg" alt="Harun Kuaför" loading="lazy" ></div><div class="gitem rv"><img src="foto/rofle-2.jpg" alt="Harun Kuaför" loading="lazy" ></div><div class="gitem rv"><img src="foto/fon-1.jpg" alt="Harun Kuaför" loading="lazy" ></div><div class="gitem rv"><img src="foto/renk-3.jpg" alt="Harun Kuaför" loading="lazy" ></div></div>
-</div></section>
-
-
-
-
-
-<footer id="iletisim"><div class="w">
-  <div class="fgrid">
-    <div>
-      <h3>Harun Kuaför</h3>
-      <p style="color:rgba(255,255,255,.6);max-width:330px">Karşıyaka'da saç kesimi, renk ve röfle. İşe başlamadan önce ne olup ne olmayacağını konuşuyoruz.</p>
+      <div class="shell rv" style="transition-delay:.24s">
+        <div class="core proof">
+          <div class="rate">
+            <b class="serif">4.8</b>
+            <div>
+              <div class="stars" aria-label="4.8 üzerinden 5">
+                <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+                <svg viewBox="0 0 24 24"><path d="M12 2l3 6.5 7 .9-5 4.9 1.2 7-6.2-3.4L5.8 21 7 14.3 2 9.4l7-.9z"/></svg>
+              </div>
+              <span>638 Google değerlendirmesi</span>
+            </div>
+          </div>
+          <div class="divider"></div>
+          <dl>
+            <div class="kv"><dt>Pazartesi</dt><dd>09:00 – 20:00</dd></div>
+            <div class="kv"><dt>Salı</dt><dd class="off">Kapalı</dd></div>
+            <div class="kv"><dt>Çarşamba – Cumartesi</dt><dd>09:00 – 20:00</dd></div>
+            <div class="kv"><dt>Pazar</dt><dd>11:00 – 18:00</dd></div>
+          </dl>
+          <div class="divider"></div>
+          <div class="kv"><dt>Adres</dt><dd>Fikri Altay Mah.<br>6183. Sk. No: 31/A</dd></div>
+        </div>
+      </div>
     </div>
-    <div>
-      <h4>İletişim</h4>
-      <a href="https://wa.me/905051158132" target="_blank">0505 115 81 32</a>
-      <a href="https://instagram.com/kuafor.harun" target="_blank">@kuafor.harun</a>
-      <a href="https://www.google.com/maps/search/Fikri+Altay+Mah.+6183.+Sk.+No:+31/A,+Karşıyaka+/+İzmir" target="_blank">Haritada aç</a>
-    </div>
-    <div>
-      <h4>Adres & Saatler</h4>
-      <p style="font-size:.92rem;color:rgba(255,255,255,.6)">Fikri Altay Mah. 6183. Sk. No: 31/A, Karşıyaka / İzmir</p>
-      <p style="font-size:.92rem;color:rgba(255,255,255,.6)">Pazartesi, Çarşamba – Cumartesi · 09:00 – 20:00 · Pazar 11:00 – 18:00 (Salı kapalı)</p>
-    </div>
-  </div>
-  <div class="fbot">
-    <span>© <span id="yil"></span> Harun Kuaför</span>
-    <span>MY BASKETO LTD tarafından hazırlandı</span>
-  </div>
-</div></footer>
+  </section>
 
-<a class="wafab" href="https://wa.me/905051158132" target="_blank" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.1-.2.3-.7 1-.9 1.2-.2.2-.3.2-.6.1-1.7-.9-2.9-1.6-4-3.6-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.2 5.1 4.5 1.9.8 2.6.9 3.5.7.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.5-.3zM12 2a10 10 0 00-8.6 15.1L2 22l5-1.3A10 10 0 1012 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1112 20.2z"/></svg>
+  <!-- STATEMENT -->
+  <section class="band" id="hikaye">
+    <div class="wrap">
+      <p class="statement serif rv">Aceleye <em>getirmiyoruz.</em></p>
+      <p class="sub rv" style="transition-delay:.08s">
+        İşimizin ağırlığı renk: boyama, röfle, renk açma ve başka yerde istenmeyen bir sonuç
+        alınmış saçların toparlanması. Kınalı saçı yıpratmadan açmak ya da komple boyanmış bir saçı
+        adım adım istenen tona getirmek sabır isteyen işlerdir. Bir işlem tek seansta mümkün değilse,
+        bunu size en başta söyleriz.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES — asymmetrical bento -->
+  <section id="hizmetler">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow rv"><i></i>Hizmetler</span>
+        <h2 class="serif rv" style="transition-delay:.06s">Ne yapıyoruz</h2>
+        <p class="rv" style="transition-delay:.1s">Her işlem öncesinde saçınıza bakıp neyin mümkün olduğunu birlikte konuşuyoruz.</p>
+      </div>
+
+      <div class="bento">
+        <article class="svc hero-card shell dark rv">
+          <div class="core">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M5 8l7 4 7-4"/><circle cx="12" cy="12" r="9"/></svg></div>
+            <h3 class="serif">Ön Görüşme ve Saç Analizi</h3>
+            <p>İşleme başlamadan önce saçınızın durumunu değerlendirir, ne istediğinizi netleştirir,
+               olacak ve olmayacak olanı baştan söyleriz. Müşterilerimizin en çok yazdığı şey bu.</p>
+            <span class="dur">Ücretsiz · 10 – 15 dk</span>
+          </div>
+        </article>
+
+        <article class="svc wide shell rv" style="transition-delay:.05s">
+          <div class="core">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20l7-7M20 4l-9 9M6 4l14 14"/><circle cx="5" cy="19" r="2"/></svg></div>
+            <h3 class="serif">Saç Kesimi</h3>
+            <p>Saç yapınıza ve günlük olarak nasıl kullandığınıza göre planlanan kesim.</p>
+            <span class="dur">30 – 60 dk</span>
+          </div>
+        </article>
+
+        <article class="svc wide shell rv" style="transition-delay:.1s">
+          <div class="core">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 10a6 6 0 01-12 0c0-3.5 6-10 6-10z"/></svg></div>
+            <h3 class="serif">Saç Boyama</h3>
+            <p>Dip boya, komple renk ve ton değişimi. Hedef rengi işlem öncesinde birlikte belirliyoruz.</p>
+            <span class="dur">90 – 150 dk</span>
+          </div>
+        </article>
+
+        <article class="svc shell rv" style="transition-delay:.05s">
+          <div class="core">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h13"/></svg></div>
+            <h3 class="serif">Röfle ve Renk Açma</h3>
+            <p>Saçın taşıyabileceği kadarını yaparız; gerekiyorsa birden fazla seansa yayarız.</p>
+            <span class="dur">150 – 240 dk</span>
+          </div>
+        </article>
+
+        <article class="svc shell rv" style="transition-delay:.1s">
+          <div class="core">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1015-6.7"/><path d="M18 3v3.5h-3.5"/></svg></div>
+            <h3 class="serif">Renk Düzeltme</h3>
+            <p>Başka yerde istenmeyen sonuç alınmış ya da kınalı saçların adım adım toparlanması.
+               Tek seansta bitmeyebilir; planı en baştan çıkarırız.</p>
+            <span class="dur">Saça göre planlanır</span>
+          </div>
+        </article>
+
+        <article class="svc shell rv" style="transition-delay:.15s">
+          <div class="core">
+            <div class="ic"><svg viewBox="0 0 24 24"><path d="M5 15c4-1 6-4 6-8M11 7c3 0 5 2 5 5s-2 5-5 5"/><path d="M4 19h16"/></svg></div>
+            <h3 class="serif">Fön ve Şekillendirme</h3>
+            <p>Günlük fön, dalga ve şekillendirme uygulamaları.</p>
+            <span class="dur">30 – 60 dk</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="band" id="galeri">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow rv"><i></i>Galeri</span>
+        <h2 class="serif rv" style="transition-delay:.06s">Çalışmalarımız</h2>
+        <p class="rv" style="transition-delay:.1s">Salonumuzdan ve uygulamalarımızdan kareler.</p>
+      </div>
+      <div class="gal">
+        <figure class="gitem rv"><div class="ph">Fotoğraf</div></figure>
+        <figure class="gitem rv" style="transition-delay:.04s"><div class="ph">Fotoğraf</div></figure>
+        <figure class="gitem rv" style="transition-delay:.08s"><div class="ph">Fotoğraf</div></figure>
+        <figure class="gitem rv" style="transition-delay:.12s"><div class="ph">Fotoğraf</div></figure>
+        <figure class="gitem rv" style="transition-delay:.04s"><div class="ph">Fotoğraf</div></figure>
+        <figure class="gitem rv" style="transition-delay:.08s"><div class="ph">Fotoğraf</div></figure>
+        <figure class="gitem rv" style="transition-delay:.12s"><div class="ph">Fotoğraf</div></figure>
+        <figure class="gitem rv" style="transition-delay:.16s"><div class="ph">Fotoğraf</div></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="randevu">
+    <div class="wrap book">
+      <div>
+        <span class="eyebrow rv"><i></i>Randevu</span>
+        <h2 class="serif rv" style="transition-delay:.06s;font-size:clamp(2.2rem,5vw,3.7rem)">Nasıl işliyor</h2>
+        <ol class="steps rv" style="transition-delay:.1s">
+          <li><b>01</b><div><strong>Formu doldurun</strong><span>Talebiniz doğrudan WhatsApp'a düşer, kaydedilmez.</span></div></li>
+          <li><b>02</b><div><strong>Ön görüşme</strong><span>İşlem öncesi ihtiyacınızı birlikte belirleriz.</span></div></li>
+          <li><b>03</b><div><strong>Net plan</strong><span>Kaç seans süreceğini işlem öncesinde konuşuruz, sürpriz yok.</span></div></li>
+        </ol>
+      </div>
+
+      <div class="shell form rv" style="transition-delay:.14s">
+        <div class="core">
+          <div class="field"><label for="ad">Ad Soyad</label><input id="ad" placeholder="Adınız ve soyadınız"></div>
+          <div class="row">
+            <div class="field"><label for="tel">Telefon</label><input id="tel" inputmode="tel" placeholder="05xx xxx xx xx"></div>
+            <div class="field"><label for="hiz">Hizmet</label>
+              <select id="hiz">
+                <option>Ön Görüşme ve Saç Analizi</option>
+                <option>Saç Kesimi</option>
+                <option>Saç Boyama</option>
+                <option>Röfle ve Renk Açma</option>
+                <option>Renk Düzeltme</option>
+                <option>Fön ve Şekillendirme</option>
+                <option>Diğer / emin değilim</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label for="gun">Tercih ettiğiniz gün / saat</label><input id="gun" placeholder="Örn. Cuma öğleden sonra"></div>
+          <div class="field"><label for="not">Eklemek istedikleriniz</label><textarea id="not" placeholder="İsteğe bağlı"></textarea></div>
+          <button class="pill lg" id="gonder" style="width:100%;justify-content:space-between">WhatsApp'tan gönder
+            <span class="knob"><svg viewBox="0 0 24 24"><path d="M5 19L19 5M9 5h10v10"/></svg></span>
+          </button>
+          <p class="note">Form bilgileri kaydedilmez, doğrudan WhatsApp mesajına dönüşür.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="iletisim">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h3>Harun <span class="it">Kuaför</span></h3>
+        <p style="margin-top:1rem;max-width:34ch">Karşıyaka Fikri Altay'da saç kesimi, renk ve röfle.
+           Önce konuşuruz, sonra makas.</p>
+      </div>
+      <div>
+        <div class="fh">İletişim</div>
+        <ul>
+          <li><a href="tel:+905051158132">0505 115 81 32</a></li>
+          <li><a href="tel:+902323234637">(0232) 323 46 37</a></li>
+          <li><a href="https://instagram.com/kuafor.harun" target="_blank" rel="noopener">@kuafor.harun</a></li>
+          <li><a href="https://www.google.com/maps/search/Harun+Kuaför+Fikri+Altay+6183+Sokak+Karşıyaka+İzmir" target="_blank" rel="noopener">Haritada aç</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fh">Adres ve Saatler</div>
+        <ul>
+          <li>Fikri Altay Mah. 6183. Sk. No: 31/A</li>
+          <li>Karşıyaka / İzmir</li>
+          <li style="margin-top:.6rem">Pzt, Çar – Cmt · 09:00 – 20:00</li>
+          <li>Pazar · 11:00 – 18:00</li>
+          <li>Salı · Kapalı</li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Harun Kuaför</span>
+      <span>MY BASKETO LTD tarafından hazırlandı</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa" href="https://wa.me/905051158132" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 004.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0012.04 2zm0 18.15h-.01a8.2 8.2 0 01-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 01-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 015.83 2.42 8.18 8.18 0 012.41 5.82c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.78.97-.15.16-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.76-1.85-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.06s.89 2.39 1.01 2.56c.12.16 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.08.15-1.18-.06-.11-.22-.17-.47-.29z"/></svg>
 </a>
 
-<div class="lb" id="lb" onclick="this.classList.remove('on')"><span class="lbx">&times;</span><img id="lbi" src=""></div>
-
 <script>
-document.getElementById('yil').textContent=new Date().getFullYear();
-addEventListener('scroll',()=>document.getElementById('hd').classList.toggle('s',scrollY>60));
-const io=new IntersectionObserver(e=>e.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.12});
-document.querySelectorAll('.rv').forEach(e=>io.observe(e));
-document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>{document.getElementById('nv').classList.remove('open');document.body.classList.remove('menu-acik')});
-function tab(i){document.querySelectorAll('.tab').forEach((t,n)=>t.classList.toggle('on',n===i));
-  document.querySelectorAll('.plist').forEach((p,n)=>p.classList.toggle('on',n===i))}
-document.querySelectorAll('.gitem img').forEach(g=>g.parentElement.onclick=()=>{
-  document.getElementById('lbi').src=g.src;document.getElementById('lb').classList.add('on')});
-const F=document.getElementById('f_gonder');
-function wa(){
-  const v=i=>(document.getElementById(i).value||'').trim();
-  let m=`Merhaba, Harun Kuaför için randevu almak istiyorum.`;
-  if(v('f_ad'))m+=`\n\nAd Soyad: ${v('f_ad')}`;
-  if(v('f_tel'))m+=`\nTelefon: ${v('f_tel')}`;
-  m+=`\nHizmet: ${v('f_hiz')}`;
-  if(v('f_zaman'))m+=`\nTercih: ${v('f_zaman')}`;
-  if(v('f_not'))m+=`\nNot: ${v('f_not')}`;
-  F.href=`https://wa.me/905051158132?text=${encodeURIComponent(m)}`;
-}
-['f_ad','f_tel','f_hiz','f_zaman','f_not'].forEach(i=>document.getElementById(i).addEventListener('input',wa));
-wa();
+(function(){
+  var burger=document.getElementById('burger'), ov=document.getElementById('overlay');
+  function toggle(force){
+    var open = force!==undefined ? force : !document.body.classList.contains('menu-open');
+    document.body.classList.toggle('menu-open',open);
+    burger.setAttribute('aria-expanded',open?'true':'false');
+  }
+  burger.addEventListener('click',function(){toggle();});
+  ov.addEventListener('click',function(e){ if(e.target.tagName==='A'||e.target===ov) toggle(false); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') toggle(false); });
+
+  // scroll entry — IntersectionObserver only
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+
+  // booking form -> whatsapp
+  var WA='905051158132';
+  document.getElementById('gonder').addEventListener('click',function(){
+    var v=function(id){return (document.getElementById(id).value||'').trim();};
+    var t='Merhaba, randevu almak istiyorum.\n\n'
+      +'Ad Soyad: '+(v('ad')||'-')+'\n'
+      +'Telefon: '+(v('tel')||'-')+'\n'
+      +'Hizmet: '+document.getElementById('hiz').value+'\n'
+      +'Tercih: '+(v('gun')||'-');
+    if(v('not')) t+='\nNot: '+v('not');
+    window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(t),'_blank','noopener');
+  });
+})();
 </script>
 </body>
 </html>
